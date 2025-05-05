@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 body{
-    background-color: #1A89C8;
+    background-color: #BE9270;
     font-family: "Mystery Quest", system-ui;
 
+}
+
+.primaryColor{
+  background-color: #BE9270;
+}
+.secondaryColor{
+  background-color: #613428;
 }
 
 /* Keyframes for the growing animation */

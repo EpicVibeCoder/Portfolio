@@ -36,7 +36,7 @@ const ParticlesComponent = () => {
       () => ({
         background: {
           color: {
-            value: "#000000",
+            value: "#",
           },
         },
         fpsLimit: 120,
@@ -63,17 +63,7 @@ const ParticlesComponent = () => {
         },
         particles: {
           color: {
-            value: [
-              "#3998D0",
-              "#2EB6AF",
-              "#A9BD33",
-              "#FEC73B",
-              "#F89930",
-              "#F45623",
-              "#D62E32",
-              "#EB586E",
-              "#9952CF"
-            ]
+            value:  "#613428"
             
           },
           links: {
@@ -84,7 +74,7 @@ const ParticlesComponent = () => {
             width: 1,
           },
           move: {
-            direction: "",
+            direction: "top",
             enable: true,
             outModes: {
               default: "out",
