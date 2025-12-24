@@ -13,14 +13,6 @@ export default function Page() {
       <About />
       <Experience />
       <Projects />
-      {/* Contact will be added in next iteration */}
-
-      <section id="contact" className="py-20 text-center bg-cocoa-900">
-        <h2 className="text-3xl font-serif text-gold-500 mb-6">
-          Let's Work Together
-        </h2>
-        <Button>Get In Touch</Button>
-      </section>
     </main>
   );
 }

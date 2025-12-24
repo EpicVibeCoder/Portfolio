@@ -58,12 +58,6 @@ export default function Hero() {
             <a href="#projects">
               <Button className="text-lg px-10 py-4">View My Work</Button>
             </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 font-bold text-gold-500 hover:text-gold-300 transition-colors"
-            >
-              Contact Me
-            </a>
           </motion.div>
         </motion.div>
       </div>
