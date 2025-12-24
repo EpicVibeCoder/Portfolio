@@ -1,35 +1,26 @@
-import chocolateDrip from "./assets/chocolateDrip.svg";
-import buttonLogo from "./assets/buttonLogo.svg";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Button from "./components/ui/Button";
+import Projects from "./components/Projects";
 
 export default function Page() {
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#be9270]">
-     
+    <main className="bg-cocoa-950 min-h-screen selection:bg-gold-500 selection:text-white">
+      <Navbar />
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      {/* Contact will be added in next iteration */}
 
-      {/* Dripping chocolate banner */}
-      <div className="absolute top-0 left-0 w-full max-h-screen overflow-hidden pointer-events-none z-20">
-        <img
-          id="growing-svg"
-          src={chocolateDrip.src}
-          alt=""
-          className="w-full h-full max-h-screen object-cover drop-shadow-[0_30px_55px_rgba(58,30,20,0.65)]"
-        />
-      </div>
-
-      {/* Hero copy within contained background */}
-      <div className="relative z-30 flex w-full max-w-2xl justify-center px-6">
-        <div className="backgroundPattern relative flex w-full flex-col items-center  text-center ">
-          <h1 className="hero-heading text-[clamp(2.5rem,6vw,4.75rem)] leading-tight">
-            Hello there,
-            <br />
-            welcome to my site
-          </h1>
-          <button className="hero-button flex items-center gap-3 px-8 py-3 text-lg">
-            Let's explore
-            <img src={buttonLogo.src} alt="" className="w-8 h-8" aria-hidden="true" />
-          </button>
-        </div>
-      </div>
-    </div>
+      <section id="contact" className="py-20 text-center bg-cocoa-900">
+        <h2 className="text-3xl font-serif text-gold-500 mb-6">
+          Let's Work Together
+        </h2>
+        <Button>Get In Touch</Button>
+      </section>
+    </main>
   );
 }
