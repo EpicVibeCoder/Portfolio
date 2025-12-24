@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // swcMinify is enabled by default in Next.js 15
   images: {
-    unoptimized: true, // For static export/Vercel compatibility if needed, though usually not for Vercel
+    // defaults are generally good for Vercel
   },
 };
 
