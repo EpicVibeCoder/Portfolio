@@ -12,14 +12,9 @@ export default function Experience() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold-600/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <motion.h2
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-serif text-gold-500 mb-16 text-center"
-        >
+        <h2 className="text-4xl md:text-5xl font-serif text-gold-500 mb-16 text-center">
           My Journey
-        </motion.h2>
+        </h2>
 
         <div className="space-y-12 border-l-2 border-gold-500/20 ml-4 md:ml-0 md:pl-0">
           {/* Experience Items */}

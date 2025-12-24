@@ -20,12 +20,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 px-6 bg-cocoa-900">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="opacity-100 transform-none">
           <h2 className="text-4xl md:text-5xl font-serif text-gold-500 mb-8 border-b border-gold-500/20 pb-4 inline-block">
             About Me
           </h2>
@@ -61,7 +56,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -40,14 +40,9 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 px-6 bg-cocoa-950">
       <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-serif text-gold-500 mb-16 text-center"
-        >
+        <h2 className="text-4xl md:text-5xl font-serif text-gold-500 mb-16 text-center">
           Selected Projects
-        </motion.h2>
+        </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
