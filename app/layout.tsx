@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display, Mystery_Quest } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
+import Providers from "./components/Providers";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -30,7 +31,7 @@ export default function RootLayout({
       className={clsx(inter.variable, playfair.variable, mysteryQuest.variable)}
     >
       <body className="bg-cocoa-900 text-cream-50 antialiased overflow-x-hidden selection:bg-gold-500 selection:text-white">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -32,7 +32,10 @@ export default function Hero() {
       {/* Main Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{
+            opacity: 1,
+            y: 0,
+          }} /* LCP Optimization: Start visible or rely on CSS */
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -57,12 +60,6 @@ export default function Hero() {
           >
             <a href="#projects">
               <Button className="text-lg px-10 py-4">View My Work</Button>
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 font-bold text-gold-500 hover:text-gold-300 transition-colors"
-            >
-              Contact Me
             </a>
           </motion.div>
         </motion.div>
