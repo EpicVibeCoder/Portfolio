@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   SiReact,
   SiNextdotjs,
@@ -33,20 +32,7 @@ export default function About() {
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-mono text-gold-400/80">
-            {[
-              { name: "React", icon: SiReact },
-              { name: "Next.js", icon: SiNextdotjs },
-              { name: "Node.js", icon: SiNodedotjs },
-              { name: "NestJS", icon: SiNestjs },
-              { name: "Solidity", icon: SiSolidity },
-              { name: "Web3.js", icon: SiEthereum },
-              { name: "React Native", icon: SiReact }, // Using React logo for Native as well default
-              { name: "AWS", icon: SiAmazon },
-              { name: "Docker", icon: SiDocker },
-              { name: "TypeScript", icon: SiTypescript },
-              { name: "MongoDB", icon: SiMongodb },
-              { name: "MySQL", icon: SiMysql },
-            ].map((skill) => (
+            {SKILLS.map((skill) => (
               <div
                 key={skill.name}
                 className="border border-gold-500/10 rounded-lg px-4 py-3 bg-cocoa-900/40 backdrop-blur-sm flex items-center justify-center gap-3 hover:border-gold-500/50 hover:bg-cocoa-800/60 transition-all group"
@@ -61,3 +47,18 @@ export default function About() {
     </section>
   );
 }
+
+const SKILLS = [
+  { name: "React", icon: SiReact },
+  { name: "Next.js", icon: SiNextdotjs },
+  { name: "Node.js", icon: SiNodedotjs },
+  { name: "NestJS", icon: SiNestjs },
+  { name: "Solidity", icon: SiSolidity },
+  { name: "Web3.js", icon: SiEthereum },
+  { name: "React Native", icon: SiReact },
+  { name: "AWS", icon: SiAmazon },
+  { name: "Docker", icon: SiDocker },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "MongoDB", icon: SiMongodb },
+  { name: "MySQL", icon: SiMysql },
+];

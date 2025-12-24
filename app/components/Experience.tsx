@@ -18,29 +18,7 @@ export default function Experience() {
 
         <div className="space-y-12 border-l-2 border-gold-500/20 ml-4 md:ml-0 md:pl-0">
           {/* Experience Items */}
-          {[
-            {
-              year: "2019",
-              title: "Full Stack & Mobile Developer",
-              company: "GPS Bangla",
-              description:
-                "Developed mobile apps using NativeScript and JavaScript, assisted in backend ASP.NET MVC development, and built the company portfolio in React. Collaborated with offshore teams for feature delivery.",
-            },
-            {
-              year: "2017 - 2018",
-              title: "Full Stack Developer",
-              company: "VisionBlue Inc.",
-              description:
-                "Developed native Android applications, integrated REST APIs, and implemented authentication. Optimized layouts for various devices and collaborated on backend API design.",
-            },
-            {
-              year: "2017",
-              title: "Android Developer",
-              company: "Parallaxlogic Infotech",
-              description:
-                "Rebuilt a full Android application from scratch, implementing multiple screens, form logic, and local storage solutions.",
-            },
-          ].map((item, index) => (
+          {EXPERIENCES.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
@@ -73,3 +51,27 @@ export default function Experience() {
     </section>
   );
 }
+
+const EXPERIENCES = [
+  {
+    year: "2019",
+    title: "Full Stack & Mobile Developer",
+    company: "GPS Bangla",
+    description:
+      "Developed mobile apps using NativeScript and JavaScript, assisted in backend ASP.NET MVC development, and built the company portfolio in React. Collaborated with offshore teams for feature delivery.",
+  },
+  {
+    year: "2017 - 2018",
+    title: "Full Stack Developer",
+    company: "VisionBlue Inc.",
+    description:
+      "Developed native Android applications, integrated REST APIs, and implemented authentication. Optimized layouts for various devices and collaborated on backend API design.",
+  },
+  {
+    year: "2017",
+    title: "Android Developer",
+    company: "Parallaxlogic Infotech",
+    description:
+      "Rebuilt a full Android application from scratch, implementing multiple screens, form logic, and local storage solutions.",
+  },
+];
