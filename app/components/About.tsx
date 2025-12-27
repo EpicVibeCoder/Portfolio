@@ -13,6 +13,8 @@ import {
   SiMongodb,
   SiMysql,
   SiExpo,
+  SiPostgresql,
+  SiAndroid,
 } from "react-icons/si";
 
 export default function About() {
@@ -37,7 +39,10 @@ export default function About() {
                 key={skill.name}
                 className="border border-gold-500/10 rounded-lg px-4 py-3 bg-cocoa-900/40 backdrop-blur-sm flex items-center justify-center gap-3 hover:border-gold-500/50 hover:bg-cocoa-800/60 transition-all group"
               >
-                <skill.icon className="text-xl group-hover:text-gold-400 transition-colors" />
+                <skill.icon 
+                  className="text-xl transition-colors" 
+                  style={{ color: skill.color }}
+                />
                 <span>{skill.name}</span>
               </div>
             ))}
@@ -49,16 +54,18 @@ export default function About() {
 }
 
 const SKILLS = [
-  { name: "React", icon: SiReact },
-  { name: "Next.js", icon: SiNextdotjs },
-  { name: "Node.js", icon: SiNodedotjs },
-  { name: "NestJS", icon: SiNestjs },
-  { name: "Solidity", icon: SiSolidity },
-  { name: "Web3.js", icon: SiEthereum },
-  { name: "React Native", icon: SiReact },
-  { name: "AWS", icon: SiAmazon },
-  { name: "Docker", icon: SiDocker },
-  { name: "TypeScript", icon: SiTypescript },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "MySQL", icon: SiMysql },
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "NestJS", icon: SiNestjs, color: "#E0234E" },
+  { name: "Solidity", icon: SiSolidity, color: "#363636" },
+  { name: "Web3.js", icon: SiEthereum, color: "#627EEA" },
+  { name: "React Native", icon: SiReact, color: "#61DAFB" },
+  { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+  { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+  { name: "Android", icon: SiAndroid, color: "#3DDC84" },
 ];
