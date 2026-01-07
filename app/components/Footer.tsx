@@ -18,7 +18,7 @@ export default function Footer() {
     e.preventDefault();
     navigator.clipboard.writeText("ashiq.upwork.profile@gmail.com");
     setShowCopied(true);
-    setTimeout(() => setShowCopied(2000));
+    setTimeout(() => setShowCopied(false), 2000);
   };
 
   return (
