@@ -4,6 +4,19 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Button from "./ui/Button";
 
+import {
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiNestjs,
+  SiAndroid,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiPostgresql,
+  SiGit,
+} from "../assets/icons";
+
 export default function Hero() {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -16,7 +29,7 @@ export default function Hero() {
       {/* Background Gradient Mesh */}
       <div className="absolute inset-0 bg-cocoa-mesh opacity-60 mix-blend-soft-light" />
 
-      {/* Floating Elements (Abstract Chocolate Chunks/Squares) */}
+      {/* Floating Icons (Tech Stacks) */}
       {isMounted &&
         FLOATING_ITEMS.map((item, index) => (
           <motion.div
@@ -36,11 +49,11 @@ export default function Hero() {
               left: item.left,
               right: item.right,
               bottom: item.bottom,
-              width: item.size,
-              height: item.size,
             }}
-            className={`absolute ${item.className} backdrop-blur-sm border border-white/5 pointer-events-none`}
-          />
+            className={`absolute text-cocoa-400/30 hover:text-cocoa-400/50 transition-colors duration-300 pointer-events-none z-0`}
+          >
+            <item.Icon size={item.size} />
+          </motion.div>
         ))}
 
       {/* Main Content */}
@@ -102,6 +115,7 @@ export default function Hero() {
 const FLOATING_ITEMS = [
   // Left Side
   {
+    Icon: SiReact,
     top: "10%",
     left: "5%",
     size: 80,
@@ -109,9 +123,9 @@ const FLOATING_ITEMS = [
     delay: 0,
     rotate: 10,
     yOffset: -20,
-    className: "bg-cocoa-600/20 rounded-xl",
   },
   {
+    Icon: SiNextdotjs,
     top: "25%",
     left: "15%",
     size: 60,
@@ -119,9 +133,9 @@ const FLOATING_ITEMS = [
     delay: 1,
     rotate: -15,
     yOffset: 30,
-    className: "bg-gold-700/10 rounded-lg",
   },
   {
+    Icon: SiNodedotjs,
     top: "45%",
     left: "8%",
     size: 40,
@@ -129,9 +143,9 @@ const FLOATING_ITEMS = [
     delay: 2,
     rotate: 20,
     yOffset: -15,
-    className: "bg-cocoa-500/15 rounded-xl",
   },
   {
+    Icon: SiNestjs,
     top: "65%",
     left: "12%",
     size: 70,
@@ -139,9 +153,9 @@ const FLOATING_ITEMS = [
     delay: 0.5,
     rotate: -10,
     yOffset: 25,
-    className: "bg-gold-600/10 rounded-2xl",
   },
   {
+    Icon: SiAndroid,
     top: "85%",
     left: "4%",
     size: 50,
@@ -149,10 +163,10 @@ const FLOATING_ITEMS = [
     delay: 1.5,
     rotate: 5,
     yOffset: -25,
-    className: "bg-cocoa-700/20 rounded-lg",
   },
   // Right Side
   {
+    Icon: SiTypescript,
     top: "15%",
     right: "8%",
     size: 90,
@@ -160,9 +174,9 @@ const FLOATING_ITEMS = [
     delay: 0.2,
     rotate: -8,
     yOffset: 20,
-    className: "bg-cocoa-600/15 rounded-3xl",
   },
   {
+    Icon: SiJavascript,
     top: "35%",
     right: "18%",
     size: 50,
@@ -170,9 +184,9 @@ const FLOATING_ITEMS = [
     delay: 1.2,
     rotate: 15,
     yOffset: -30,
-    className: "bg-gold-500/10 rounded-xl",
   },
   {
+    Icon: SiTailwindcss,
     top: "55%",
     right: "6%",
     size: 75,
@@ -180,9 +194,9 @@ const FLOATING_ITEMS = [
     delay: 2.2,
     rotate: -12,
     yOffset: 25,
-    className: "bg-cocoa-500/20 rounded-2xl",
   },
   {
+    Icon: SiPostgresql,
     top: "75%",
     right: "15%",
     size: 45,
@@ -190,9 +204,9 @@ const FLOATING_ITEMS = [
     delay: 0.8,
     rotate: 8,
     yOffset: -18,
-    className: "bg-gold-700/15 rounded-lg",
   },
   {
+    Icon: SiGit,
     top: "90%",
     right: "5%",
     size: 65,
@@ -200,10 +214,10 @@ const FLOATING_ITEMS = [
     delay: 1.8,
     rotate: -20,
     yOffset: 22,
-    className: "bg-cocoa-600/10 rounded-xl",
   },
   // Center / Spread
   {
+    Icon: SiReact, // Reuse
     top: "5%",
     left: "40%",
     size: 30,
@@ -211,9 +225,9 @@ const FLOATING_ITEMS = [
     delay: 0.5,
     rotate: 45,
     yOffset: 15,
-    className: "bg-cream-500/10 rounded-lg",
   },
   {
+    Icon: SiNextdotjs, // Reuse
     top: "12%",
     right: "35%",
     size: 35,
@@ -221,9 +235,9 @@ const FLOATING_ITEMS = [
     delay: 2.5,
     rotate: -45,
     yOffset: -15,
-    className: "bg-gold-400/10 rounded-lg",
   },
   {
+    Icon: SiNodedotjs, // Reuse
     bottom: "15%",
     left: "35%",
     size: 40,
@@ -231,9 +245,9 @@ const FLOATING_ITEMS = [
     delay: 1.5,
     rotate: 30,
     yOffset: 20,
-    className: "bg-cocoa-400/15 rounded-xl",
   },
   {
+    Icon: SiNestjs, // Reuse
     bottom: "8%",
     right: "40%",
     size: 55,
@@ -241,10 +255,10 @@ const FLOATING_ITEMS = [
     delay: 0.3,
     rotate: -30,
     yOffset: -20,
-    className: "bg-gold-600/10 rounded-2xl",
   },
   // Extra fillers for density
   {
+    Icon: SiAndroid, // Reuse
     top: "30%",
     left: "3%",
     size: 25,
@@ -252,9 +266,9 @@ const FLOATING_ITEMS = [
     delay: 3,
     rotate: 60,
     yOffset: 40,
-    className: "bg-cocoa-800/20 rounded-md",
   },
   {
+    Icon: SiTypescript, // Reuse
     bottom: "40%",
     right: "2%",
     size: 28,
@@ -262,9 +276,9 @@ const FLOATING_ITEMS = [
     delay: 0,
     rotate: -60,
     yOffset: -40,
-    className: "bg-gold-800/10 rounded-md",
   },
   {
+    Icon: SiJavascript, // Reuse
     top: "50%",
     left: "90%",
     size: 20,
@@ -272,9 +286,9 @@ const FLOATING_ITEMS = [
     delay: 1,
     rotate: 180,
     yOffset: 50,
-    className: "bg-cream-100/10 rounded",
   },
   {
+    Icon: SiTailwindcss, // Reuse
     top: "20%",
     left: "80%",
     size: 22,
@@ -282,9 +296,9 @@ const FLOATING_ITEMS = [
     delay: 2,
     rotate: -180,
     yOffset: -50,
-    className: "bg-cocoa-300/10 rounded",
   },
   {
+    Icon: SiPostgresql, // Reuse
     bottom: "25%",
     right: "85%",
     size: 24,
@@ -292,9 +306,9 @@ const FLOATING_ITEMS = [
     delay: 4,
     rotate: 90,
     yOffset: 60,
-    className: "bg-gold-300/10 rounded",
   },
   {
+    Icon: SiGit, // Reuse
     top: "40%",
     left: "60%",
     size: 18,
@@ -302,6 +316,5 @@ const FLOATING_ITEMS = [
     delay: 5,
     rotate: -90,
     yOffset: -60,
-    className: "bg-cocoa-400/5 rounded",
   },
 ];
