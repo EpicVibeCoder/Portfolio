@@ -1,18 +1,42 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   FaGithub,
   FaEnvelope,
   FaWhatsapp,
   FaMapMarkerAlt,
+  FaCheck,
 } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [showCopied, setShowCopied] = useState(false);
+
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText("ashiq.upwork.profile@gmail.com");
+    setShowCopied(true);
+    setTimeout(() => setShowCopied(2000));
+  };
 
   return (
-    <footer className="bg-cocoa-900 border-t border-white/5 pt-16 pb-8 px-6">
+    <footer className="bg-cocoa-900 border-t border-white/5 pt-16 pb-8 px-6 relative">
+      <AnimatePresence>
+        {showCopied && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, x: "-50%" }}
+            animate={{ opacity: 1, y: 0, x: "-50%" }}
+            exit={{ opacity: 0, y: 10, x: "-50%" }}
+            className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-gold-500 text-cocoa-900 px-4 py-2 rounded-full font-bold shadow-lg flex items-center gap-2 z-50 text-sm"
+          >
+            <FaCheck />
+            <span>Email copied to clipboard!</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mb-16">
         {/* Brand & Summary */}
         <div>
@@ -29,13 +53,14 @@ export default function Footer() {
         <div className="flex flex-col gap-6 md:items-end">
           <h3 className="text-xl font-serif text-cream-50 mb-2">Contact</h3>
 
-          <a
-            href="mailto:ashiq.upwork.profile@gmail.com"
-            className="flex items-center gap-3 text-cream-200/80 hover:text-gold-500 transition-colors"
+          <button
+            onClick={handleCopyEmail}
+            className="flex items-center gap-3 text-cream-200/80 hover:text-gold-500 transition-colors group"
+            aria-label="Copy email address"
           >
-            <FaEnvelope />
+            <FaEnvelope className="group-hover:scale-110 transition-transform" />
             <span>ashiq.upwork.profile@gmail.com</span>
-          </a>
+          </button>
 
           <a
             href="https://wa.me/8801726848226"
