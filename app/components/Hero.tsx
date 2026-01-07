@@ -50,15 +50,14 @@ export default function Hero() {
             Hello, I am
           </h2>
           <h1 className="font-serif text-5xl md:text-8xl font-bold text-cream-50 mb-6 leading-tight">
-            Mir Ashiqul <br />
-            <span className="text-gradient-gold">Hossain</span>
+            EpicVibe
+            <br />
+            <span className="text-gradient-gold">Coder</span>
           </h1>
-
-          <p className="text-cream-200/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-sans leading-relaxed">
-            Transforming complex problems into elegant, high-performance web
-            experiences. Specializing in modern full-stack development.
-          </p>
-
+          Full-stack developer with practical experience in web, mobile, and
+          blockchain development. Skilled in React, Next.js, Node.js, NestJS,
+          and Android development, with a strong interest in building secure,
+          scalable applications.
           <motion.div
             className="flex flex-col md:flex-row items-center justify-center gap-4"
             initial={{ opacity: 0 }}

@@ -10,6 +10,7 @@ const navLinks = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
+  { name: "Education", href: "#education" },
 ];
 
 export default function Navbar() {
@@ -38,7 +39,7 @@ export default function Navbar() {
           href="#"
           className="font-display text-2xl text-gold-500 hover:text-gold-400 transition-colors"
         >
-          Mir Ashiqul Hossain
+          EpicVibeCoder
         </a>
 
         {/* Desktop Nav */}
@@ -52,10 +53,7 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <a
-            href="/Mir Ashiqul Hossain.pdf"
-            download="Mir_Ashiqul_Hossain_CV.pdf"
-          >
+          <a href="/EpicVibeCoder_CV.pdf" download="EpicVibeCoder_CV.pdf">
             <Button variant="primary" className="py-2 px-6 text-sm">
               Download CV
             </Button>

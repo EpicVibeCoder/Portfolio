@@ -12,9 +12,7 @@ export default function Experience() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold-600/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-serif text-gold-500 mb-16 text-center">
-          My Journey
-        </h2>
+        <h2 className="section-title-center">My Journey</h2>
 
         <div className="space-y-12 border-l-2 border-gold-500/20 ml-4 md:ml-0 md:pl-0">
           {/* Experience Items */}
@@ -54,24 +52,24 @@ export default function Experience() {
 
 const EXPERIENCES = [
   {
-    year: "2019",
+    year: "Mar 2019 - Oct 2019",
     title: "Full Stack & Mobile Developer",
     company: "GPS Bangla",
     description:
-      "Developed mobile apps using NativeScript and JavaScript, assisted in backend ASP.NET MVC development, and built the company portfolio in React. Collaborated with offshore teams for feature delivery.",
+      "Worked on mobile app development using NativeScript and JavaScript. Assisted backend development with ASP.NET MVC. Built the company portfolio website in React. Collaborated with offshore teams on mobile UI and feature delivery.",
   },
   {
-    year: "2017 - 2018",
+    year: "Oct 2017 - Jan 2018",
     title: "Full Stack Developer",
     company: "VisionBlue Inc.",
     description:
-      "Developed native Android applications, integrated REST APIs, and implemented authentication. Optimized layouts for various devices and collaborated on backend API design.",
+      "Developed native Android applications using Java and Android Studio. Built UI screens, integrated REST APIs, and implemented new feature modules. Reskinned apps, added authentication, and optimized layouts. Worked closely with clients and backend developers.",
   },
   {
-    year: "2017",
+    year: "Jun 2017 - Aug 2017",
     title: "Android Developer",
     company: "Parallaxlogic Infotech",
     description:
-      "Rebuilt a full Android application from scratch, implementing multiple screens, form logic, and local storage solutions.",
+      "Rebuilt a full Android application from scratch as a capability evaluation. Implemented multiple screens, form logic, and local storage.",
   },
 ];

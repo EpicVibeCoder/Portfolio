@@ -8,35 +8,54 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        border: "rgb(var(--border) / 0.1)", // Special case for this border
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
+        primary: {
+          DEFAULT: "rgb(var(--primary) / <alpha-value>)",
+          foreground: "rgb(var(--primary-foreground) / <alpha-value>)",
+        },
+        secondary: {
+          DEFAULT: "rgb(var(--secondary) / <alpha-value>)",
+          foreground: "rgb(var(--secondary-foreground) / <alpha-value>)",
+        },
+        muted: {
+          DEFAULT: "rgb(var(--muted) / <alpha-value>)",
+          foreground: "rgb(var(--muted-foreground) / <alpha-value>)",
+        },
+        accent: {
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          foreground: "rgb(var(--accent-foreground) / <alpha-value>)",
+        },
+        // Legacy/Direct Access
         cocoa: {
-          50: "#fbf5f2",
-          100: "#f5e9e2",
-          200: "#ecd3c4",
-          300: "#dfb6fc", // Typo fix in next step if needed, but sticking to brown scale
-          // Let's use a real brown scale
-          400: "#9c6f56",
-          500: "#7d523e",
-          600: "#613428", // Original Secondary
-          700: "#4f2717",
-          800: "#422218",
-          900: "#381e16", // Deep background
-          950: "#2a1208", // Original Primary
+          50: "rgb(var(--cocoa-50) / <alpha-value>)",
+          100: "rgb(var(--cocoa-100) / <alpha-value>)",
+          200: "rgb(var(--cocoa-200) / <alpha-value>)",
+          300: "rgb(var(--cocoa-300) / <alpha-value>)",
+          400: "rgb(var(--cocoa-400) / <alpha-value>)",
+          500: "rgb(var(--cocoa-500) / <alpha-value>)",
+          600: "rgb(var(--cocoa-600) / <alpha-value>)",
+          700: "rgb(var(--cocoa-700) / <alpha-value>)",
+          800: "rgb(var(--cocoa-800) / <alpha-value>)",
+          900: "rgb(var(--cocoa-900) / <alpha-value>)",
+          950: "rgb(var(--cocoa-950) / <alpha-value>)",
         },
         gold: {
-          50: "#fdf9e8",
-          100: "#fbf1c5",
-          200: "#f6e18e",
-          300: "#efcb4d",
-          400: "#e8b21e",
-          500: "#d49b10", // Darker gold
-          600: "#b27b0b",
-          700: "#BE9270", // Original "Gold/Caramel"
-          800: "#78500e",
-          900: "#664212",
+          50: "rgb(var(--gold-50) / <alpha-value>)",
+          100: "rgb(var(--gold-100) / <alpha-value>)",
+          200: "rgb(var(--gold-200) / <alpha-value>)",
+          300: "rgb(var(--gold-300) / <alpha-value>)",
+          400: "rgb(var(--gold-400) / <alpha-value>)",
+          500: "rgb(var(--gold-500) / <alpha-value>)",
+          600: "rgb(var(--gold-600) / <alpha-value>)",
+          700: "rgb(var(--gold-700) / <alpha-value>)",
+          800: "rgb(var(--gold-800) / <alpha-value>)",
+          900: "rgb(var(--gold-900) / <alpha-value>)",
         },
         cream: {
-          50: "#FDF5E6", // Old Lace
-          100: "#F8EED9",
+          50: "rgb(var(--cream-50) / <alpha-value>)",
+          100: "rgb(var(--cream-100) / <alpha-value>)",
         },
       },
       fontFamily: {

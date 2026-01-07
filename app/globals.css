@@ -3,25 +3,95 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Color Palette - Cocoa (RGB Channels) */
+    --cocoa-50: 251 245 242; /* #fbf5f2 */
+    --cocoa-100: 245 233 226; /* #f5e9e2 */
+    --cocoa-200: 236 211 196; /* #ecd3c4 */
+    --cocoa-300: 223 182 252; /* #dfb6fc */
+    --cocoa-400: 156 111 86; /* #9c6f56 */
+    --cocoa-500: 125 82 62; /* #7d523e */
+    --cocoa-600: 97 52 40; /* #613428 */
+    --cocoa-700: 79 39 23; /* #4f2717 */
+    --cocoa-800: 66 34 24; /* #422218 */
+    --cocoa-900: 56 30 22; /* #381e16 */
+    --cocoa-950: 42 18 8; /* #2a1208 */
+
+    /* Color Palette - Gold (RGB Channels) */
+    --gold-50: 253 249 232; /* #fdf9e8 */
+    --gold-100: 251 241 197; /* #fbf1c5 */
+    --gold-200: 246 225 142; /* #f6e18e */
+    --gold-300: 239 203 77; /* #efcb4d */
+    --gold-400: 232 178 30; /* #e8b21e */
+    --gold-500: 212 155 16; /* #d49b10 */
+    --gold-600: 178 123 11; /* #b27b0b */
+    --gold-700: 190 146 112; /* #BE9270 */
+    --gold-800: 120 80 14; /* #78500e */
+    --gold-900: 102 66 18; /* #664212 */
+
+    /* Color Palette - Cream (RGB Channels) */
+    --cream-50: 253 245 230; /* #FDF5E6 */
+    --cream-100: 248 238 217; /* #F8EED9 */
+
+    /* Semantic Tokens */
+    --background: var(--cocoa-950);
+    --foreground: var(--cream-50);
+
+    --primary: var(--gold-500);
+    --primary-foreground: 255 255 255;
+
+    --secondary: var(--cocoa-600);
+    --secondary-foreground: var(--cream-50);
+
+    --accent: var(--gold-400);
+    --muted: var(--cocoa-900);
+    --muted-foreground: var(--cocoa-200);
+
+    --border: 255 255 255; /* RGB for use with opacity */
+  }
+
   html {
     scroll-behavior: smooth;
   }
+
   body {
-    @apply bg-cocoa-950 text-cream-50 font-sans;
+    @apply bg-background text-foreground font-sans;
   }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-serif font-bold text-cream-50;
+    @apply font-serif font-bold text-foreground;
   }
 }
 
 @layer components {
+  /* Reusable Component Classes */
+  .btn {
+    @apply relative px-8 py-3 overflow-hidden font-bold rounded-full transition-all duration-300 transform font-serif inline-flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-gold-600 to-gold-700 text-white shadow-lg hover:bg-gradient-to-r hover:from-gold-500 hover:to-gold-600 hover:scale-105 hover:shadow-gold-500/30;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gold-500 text-gold-500 hover:bg-gold-500/10 hover:shadow-lg hover:shadow-gold-500/20;
+  }
+
   .glass-panel {
     @apply bg-cocoa-900/40 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif text-gold-500 mb-8 border-b border-gold-500/20 pb-4 inline-block;
+  }
+
+  .section-title-center {
+    @apply text-4xl md:text-5xl font-serif text-gold-500 mb-16 text-center;
   }
 
   .text-gradient-gold {

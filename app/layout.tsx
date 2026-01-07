@@ -16,7 +16,7 @@ const mysteryQuest = Mystery_Quest({
 });
 
 export const metadata: Metadata = {
-  title: "Mir Ashiqul Hossain | Portfolio",
+  title: "EpicVibeCoder | Portfolio",
   description: "Premium Portfolio Site",
 };
 

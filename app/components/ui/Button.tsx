@@ -14,13 +14,10 @@ export default function Button({
   children,
   ...props
 }: ButtonProps) {
-  const baseStyles =
-    "relative px-8 py-3 overflow-hidden font-bold rounded-full transition-all duration-300 transform font-serif";
+  const baseStyles = "btn";
   const variants = {
-    primary:
-      "bg-gradient-to-r from-gold-600 to-gold-700 text-white shadow-lg hover:bg-gradient-to-r hover:from-gold-500 hover:to-gold-600 hover:scale-105 hover:shadow-gold-500/30",
-    outline:
-      "border-2 border-gold-500 text-gold-500 hover:bg-gold-500/10 hover:shadow-lg hover:shadow-gold-500/20",
+    primary: "btn-primary",
+    outline: "btn-outline",
   };
 
   return (
