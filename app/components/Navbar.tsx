@@ -6,11 +6,12 @@ import clsx from "clsx";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Button from "./ui/Button";
 
-const navLinks = [
+const navItems = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -44,7 +45,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {navItems.map((link) => (
             <a
               key={link.name}
               href={link.href}
@@ -79,7 +80,7 @@ export default function Navbar() {
             className="md:hidden overflow-hidden bg-cocoa-900/95 backdrop-blur-xl mt-4 rounded-xl border border-white/10"
           >
             <div className="flex flex-col items-center gap-6 py-8">
-              {navLinks.map((link) => (
+              {navItems.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}

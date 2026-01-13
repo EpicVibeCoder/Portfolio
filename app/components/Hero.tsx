@@ -15,7 +15,7 @@ import {
   SiTailwindcss,
   SiPostgresql,
   SiGit,
-} from "../assets/icons";
+} from "react-icons/si";
 
 export default function Hero() {
   const [isMounted, setIsMounted] = useState(false);
@@ -67,10 +67,12 @@ export default function Hero() {
             <br />
             <span className="text-gradient-gold">Coder</span>
           </h1>
-          Full-stack developer with practical experience in web, mobile, and
-          blockchain development. Skilled in React, Next.js, Node.js, NestJS,
-          and Android development, with a strong interest in building secure,
-          scalable applications.
+          <p className="text-xl text-cream-100/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Full-stack developer with practical experience in web, mobile, and
+            blockchain development. Skilled in React, Next.js, Node.js, NestJS,
+            and Android development, with a strong interest in building secure,
+            scalable applications. Will vibe code my way to perfection.
+          </p>
           <motion.div
             className="flex flex-col md:flex-row items-center justify-center gap-4"
             initial={{ opacity: 0 }}
