@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import Button from "./ui/Button";
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import Button from './ui/Button';
 
 import {
   SiReact,
@@ -15,7 +15,7 @@ import {
   SiTailwindcss,
   SiPostgresql,
   SiGit,
-} from "react-icons/si";
+} from 'react-icons/si';
 
 export default function Hero() {
   const [isMounted, setIsMounted] = useState(false);
@@ -27,7 +27,10 @@ export default function Hero() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-cocoa-950">
       {/* Background Gradient Mesh */}
-      <div className="absolute inset-0 bg-cocoa-mesh opacity-60 mix-blend-soft-light" />
+      <div
+        className="absolute inset-0 bg-cocoa-mesh opacity-60 mix-blend-soft-light"
+        aria-hidden="true"
+      />
 
       {/* Floating Icons (Tech Stacks) */}
       {isMounted &&
@@ -41,7 +44,7 @@ export default function Hero() {
             transition={{
               duration: item.duration,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: 'easeInOut',
               delay: item.delay,
             }}
             style={{
@@ -68,10 +71,10 @@ export default function Hero() {
             <span className="text-gradient-gold">Coder</span>
           </h1>
           <p className="text-xl text-cream-100/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Full-stack developer with practical experience in web, mobile, and
-            blockchain development. Skilled in React, Next.js, Node.js, NestJS,
-            and Android development, with a strong interest in building secure,
-            scalable applications. Will vibe code my way to perfection.
+            Full-stack developer with practical experience in web, mobile, and blockchain
+            development. Skilled in React, Next.js, Node.js, NestJS, and Android development, with a
+            strong interest in building secure, scalable applications. Will vibe code my way to
+            perfection.
           </p>
           <motion.div
             className="flex flex-col md:flex-row items-center justify-center gap-4"
@@ -91,7 +94,7 @@ export default function Hero() {
         <motion.div
           initial={{ y: -100 }}
           animate={{ y: 0 }}
-          transition={{ duration: 1, type: "spring" }}
+          transition={{ duration: 1, type: 'spring' }}
           className="absolute top-0 left-0 w-full pointer-events-none opacity-40 mix-blend-overlay"
         >
           {/* We can use the SVG here if we want, or just a CSS shape */}
@@ -118,8 +121,8 @@ const FLOATING_ITEMS = [
   // Left Side
   {
     Icon: SiReact,
-    top: "10%",
-    left: "5%",
+    top: '10%',
+    left: '5%',
     size: 80,
     duration: 7,
     delay: 0,
@@ -128,8 +131,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiNextdotjs,
-    top: "25%",
-    left: "15%",
+    top: '25%',
+    left: '15%',
     size: 60,
     duration: 8,
     delay: 1,
@@ -138,8 +141,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiNodedotjs,
-    top: "45%",
-    left: "8%",
+    top: '45%',
+    left: '8%',
     size: 40,
     duration: 6,
     delay: 2,
@@ -148,8 +151,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiNestjs,
-    top: "65%",
-    left: "12%",
+    top: '65%',
+    left: '12%',
     size: 70,
     duration: 9,
     delay: 0.5,
@@ -158,8 +161,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiAndroid,
-    top: "85%",
-    left: "4%",
+    top: '85%',
+    left: '4%',
     size: 50,
     duration: 7.5,
     delay: 1.5,
@@ -169,8 +172,8 @@ const FLOATING_ITEMS = [
   // Right Side
   {
     Icon: SiTypescript,
-    top: "15%",
-    right: "8%",
+    top: '15%',
+    right: '8%',
     size: 90,
     duration: 8.5,
     delay: 0.2,
@@ -179,8 +182,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiJavascript,
-    top: "35%",
-    right: "18%",
+    top: '35%',
+    right: '18%',
     size: 50,
     duration: 6.5,
     delay: 1.2,
@@ -189,8 +192,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiTailwindcss,
-    top: "55%",
-    right: "6%",
+    top: '55%',
+    right: '6%',
     size: 75,
     duration: 9.5,
     delay: 2.2,
@@ -199,8 +202,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiPostgresql,
-    top: "75%",
-    right: "15%",
+    top: '75%',
+    right: '15%',
     size: 45,
     duration: 7,
     delay: 0.8,
@@ -209,8 +212,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiGit,
-    top: "90%",
-    right: "5%",
+    top: '90%',
+    right: '5%',
     size: 65,
     duration: 8,
     delay: 1.8,
@@ -220,8 +223,8 @@ const FLOATING_ITEMS = [
   // Center / Spread
   {
     Icon: SiReact, // Reuse
-    top: "5%",
-    left: "40%",
+    top: '5%',
+    left: '40%',
     size: 30,
     duration: 10,
     delay: 0.5,
@@ -230,8 +233,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiNextdotjs, // Reuse
-    top: "12%",
-    right: "35%",
+    top: '12%',
+    right: '35%',
     size: 35,
     duration: 9,
     delay: 2.5,
@@ -240,8 +243,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiNodedotjs, // Reuse
-    bottom: "15%",
-    left: "35%",
+    bottom: '15%',
+    left: '35%',
     size: 40,
     duration: 8,
     delay: 1.5,
@@ -250,8 +253,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiNestjs, // Reuse
-    bottom: "8%",
-    right: "40%",
+    bottom: '8%',
+    right: '40%',
     size: 55,
     duration: 7,
     delay: 0.3,
@@ -261,8 +264,8 @@ const FLOATING_ITEMS = [
   // Extra fillers for density
   {
     Icon: SiAndroid, // Reuse
-    top: "30%",
-    left: "3%",
+    top: '30%',
+    left: '3%',
     size: 25,
     duration: 11,
     delay: 3,
@@ -271,8 +274,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiTypescript, // Reuse
-    bottom: "40%",
-    right: "2%",
+    bottom: '40%',
+    right: '2%',
     size: 28,
     duration: 12,
     delay: 0,
@@ -281,8 +284,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiJavascript, // Reuse
-    top: "50%",
-    left: "90%",
+    top: '50%',
+    left: '90%',
     size: 20,
     duration: 13,
     delay: 1,
@@ -291,8 +294,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiTailwindcss, // Reuse
-    top: "20%",
-    left: "80%",
+    top: '20%',
+    left: '80%',
     size: 22,
     duration: 14,
     delay: 2,
@@ -301,8 +304,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiPostgresql, // Reuse
-    bottom: "25%",
-    right: "85%",
+    bottom: '25%',
+    right: '85%',
     size: 24,
     duration: 15,
     delay: 4,
@@ -311,8 +314,8 @@ const FLOATING_ITEMS = [
   },
   {
     Icon: SiGit, // Reuse
-    top: "40%",
-    left: "60%",
+    top: '40%',
+    left: '60%',
     size: 18,
     duration: 16,
     delay: 5,

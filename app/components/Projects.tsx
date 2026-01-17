@@ -1,51 +1,52 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import Button from "./ui/Button";
+import { motion } from 'framer-motion';
+import Button from './ui/Button';
+import Image from 'next/image';
 
 const projects = [
   {
-    title: "Mini E-Commerce API",
-    tech: "NestJS, Prisma, MySQL, Redis",
+    title: 'Mini E-Commerce API',
+    tech: 'NestJS, Prisma, MySQL, Redis',
     description:
-      "Designed a scalable backend REST API with modular architecture. Implemented secure auth, role-based access, Stripe payments, Redis caching, and graph traversal for product recommendations. Containerized with Docker.",
-    image: "https://placehold.co/600x400?text=E-Commerce+API",
+      'Designed a scalable backend REST API with modular architecture. Implemented secure auth, role-based access, Stripe payments, Redis caching, and graph traversal for product recommendations. Containerized with Docker.',
+    image: 'https://placehold.co/600x400?text=E-Commerce+API',
     links: {
-      demo: "#",
-      github: "#", // Placeholder as URL wasn't explicit in text
+      demo: '#',
+      github: '#', // Placeholder as URL wasn't explicit in text
     },
   },
   {
-    title: "Classroom Booking System",
-    tech: "PHP, MySQL, AJAX",
+    title: 'Classroom Booking System',
+    tech: 'PHP, MySQL, AJAX',
     description:
-      "Designed a full-stack web application with session security. Implemented OWASP Top 10 protections (SQLi, CSRF, XSS), IP-based rate limiting, and Two-Factor Authentication (2FA).",
-    image: "https://placehold.co/600x400?text=Classroom+Booking",
+      'Designed a full-stack web application with session security. Implemented OWASP Top 10 protections (SQLi, CSRF, XSS), IP-based rate limiting, and Two-Factor Authentication (2FA).',
+    image: 'https://placehold.co/600x400?text=Classroom+Booking',
     links: {
-      demo: "https://classroombookingapp.infinityfreeapp.com/classRoomBookings.php",
-      github: "https://github.com/EpicVibeCoder/ClassroomProject",
+      demo: 'https://classroombookingapp.infinityfreeapp.com/classRoomBookings.php',
+      github: 'https://github.com/EpicVibeCoder/ClassroomProject',
     },
   },
   {
-    title: "Restaurant Landing Page",
-    tech: "Next.js, Tailwind CSS",
+    title: 'Restaurant Landing Page',
+    tech: 'Next.js, Tailwind CSS',
     description:
-      "Built a responsive, SEO-friendly landing page achieving Lighthouse scores above 90%. Optimized performance and created custom scroll animations.",
-    image: "https://placehold.co/600x400?text=Restaurant+Landing+Page",
+      'Built a responsive, SEO-friendly landing page achieving Lighthouse scores above 90%. Optimized performance and created custom scroll animations.',
+    image: 'https://placehold.co/600x400?text=Restaurant+Landing+Page',
     links: {
-      demo: "https://interview-sample.vercel.app/",
-      github: "https://github.com/EpicVibeCoder/interview_sample",
+      demo: 'https://interview-sample.vercel.app/',
+      github: 'https://github.com/EpicVibeCoder/interview_sample',
     },
   },
   {
-    title: "Blockchain Voting System",
-    tech: "React, Node.js, Solidity, MongoDB",
+    title: 'Blockchain Voting System',
+    tech: 'React, Node.js, Solidity, MongoDB',
     description:
-      "Architected a hybrid DApp using Node.js middleware to bridge React with Ethereum. Engineered a scalable Solidity smart contract for concurrent elections and gas-optimized storage.",
-    image: "https://placehold.co/600x400?text=Blockchain+Voting",
+      'Architected a hybrid DApp using Node.js middleware to bridge React with Ethereum. Engineered a scalable Solidity smart contract for concurrent elections and gas-optimized storage.',
+    image: 'https://placehold.co/600x400?text=Blockchain+Voting',
     links: {
-      demo: "https://www.loom.com/share/acd4eab6c2bd4e8d9b7279d60915be1e",
-      github: "https://github.com/EpicVibeCoder/FYDP",
+      demo: 'https://www.loom.com/share/acd4eab6c2bd4e8d9b7279d60915be1e',
+      github: 'https://github.com/EpicVibeCoder/FYDP',
     },
   },
 ];
@@ -68,10 +69,11 @@ export default function Projects() {
             >
               {/* Project Image Placeholder */}
               <div className="w-full h-48 bg-cocoa-800/50 relative overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform"
+                  fill
+                  className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-cocoa-900 to-transparent opacity-60" />
               </div>
@@ -88,7 +90,7 @@ export default function Projects() {
                 </p>
 
                 <div className="flex gap-4 mt-auto">
-                  {project.links.github !== "#" && (
+                  {project.links.github !== '#' && (
                     <a
                       href={project.links.github}
                       target="_blank"
@@ -98,7 +100,7 @@ export default function Projects() {
                       GitHub
                     </a>
                   )}
-                  {project.links.demo !== "#" && (
+                  {project.links.demo !== '#' && (
                     <a
                       href={project.links.demo}
                       target="_blank"

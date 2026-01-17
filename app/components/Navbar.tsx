@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import clsx from "clsx";
-import { FaBars, FaTimes } from "react-icons/fa";
-import Button from "./ui/Button";
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import clsx from 'clsx';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import Button from './ui/Button';
 
 const navItems = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Education", href: "#education" },
-  { name: "Contact", href: "#contact" },
+  { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Education', href: '#education' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -22,8 +22,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -31,8 +31,8 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={clsx(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-        isScrolled ? "glass-panel mx-4 mt-4 py-3" : "bg-transparent"
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
+        isScrolled ? 'glass-panel mx-4 mt-4 py-3' : 'bg-transparent',
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -65,6 +65,7 @@ export default function Navbar() {
         <button
           className="md:hidden text-cream-100 text-2xl"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
         >
           {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -75,7 +76,7 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden overflow-hidden bg-cocoa-900/95 backdrop-blur-xl mt-4 rounded-xl border border-white/10"
           >

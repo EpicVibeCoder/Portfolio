@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="py-20 px-6 bg-cocoa-950 relative overflow-hidden"
-    >
+    <section id="experience" className="py-20 px-6 bg-cocoa-950 relative overflow-hidden">
       {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-600/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div
+        className="absolute top-0 right-0 w-96 h-96 bg-gold-600/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
+        aria-hidden="true"
+      />
 
       <div className="max-w-5xl mx-auto relative z-10">
         <h2 className="section-title-center">My Journey</h2>
@@ -36,9 +36,7 @@ export default function Experience() {
 
               {/* Content */}
               <div className="md:col-span-4 bg-cocoa-900/50 p-6 rounded-xl border border-white/5 hover:border-gold-500/30 transition-colors">
-                <h3 className="text-xl font-bold text-cream-50">
-                  {item.title}
-                </h3>
+                <h3 className="text-xl font-bold text-cream-50">{item.title}</h3>
                 <h4 className="text-gold-500/80 mb-4">{item.company}</h4>
                 <p className="text-cream-200/70 text-sm">{item.description}</p>
               </div>
@@ -52,24 +50,24 @@ export default function Experience() {
 
 const EXPERIENCES = [
   {
-    year: "Mar 2019 - Oct 2019",
-    title: "Full Stack & Mobile Developer",
-    company: "GPS Bangla",
+    year: 'Mar 2019 - Oct 2019',
+    title: 'Full Stack & Mobile Developer',
+    company: 'GPS Bangla',
     description:
-      "Worked on mobile app development using NativeScript and JavaScript. Assisted backend development with ASP.NET MVC. Built the company portfolio website in React. Collaborated with offshore teams on mobile UI and feature delivery.",
+      'Worked on mobile app development using NativeScript and JavaScript. Assisted backend development with ASP.NET MVC. Built the company portfolio website in React. Collaborated with offshore teams on mobile UI and feature delivery.',
   },
   {
-    year: "Oct 2017 - Jan 2018",
-    title: "Full Stack Developer",
-    company: "VisionBlue Inc.",
+    year: 'Oct 2017 - Jan 2018',
+    title: 'Full Stack Developer',
+    company: 'VisionBlue Inc.',
     description:
-      "Developed native Android applications using Java and Android Studio. Built UI screens, integrated REST APIs, and implemented new feature modules. Reskinned apps, added authentication, and optimized layouts. Worked closely with clients and backend developers.",
+      'Developed native Android applications using Java and Android Studio. Built UI screens, integrated REST APIs, and implemented new feature modules. Reskinned apps, added authentication, and optimized layouts. Worked closely with clients and backend developers.',
   },
   {
-    year: "Jun 2017 - Aug 2017",
-    title: "Android Developer",
-    company: "Parallaxlogic Infotech",
+    year: 'Jun 2017 - Aug 2017',
+    title: 'Android Developer',
+    company: 'Parallaxlogic Infotech',
     description:
-      "Rebuilt a full Android application from scratch as a capability evaluation. Implemented multiple screens, form logic, and local storage.",
+      'Rebuilt a full Android application from scratch as a capability evaluation. Implemented multiple screens, form logic, and local storage.',
   },
 ];
