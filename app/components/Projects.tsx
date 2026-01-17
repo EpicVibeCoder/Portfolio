@@ -10,10 +10,10 @@ const projects = [
     tech: 'NestJS, Prisma, MySQL, Redis',
     description:
       'Designed a scalable backend REST API with modular architecture. Implemented secure auth, role-based access, Stripe payments, Redis caching, and graph traversal for product recommendations. Containerized with Docker.',
-    image: 'https://placehold.co/600x400?text=E-Commerce+API',
+    image: 'https://placehold.co/600x400?text=E-Commerce+API', // No screenshot provided yet
     links: {
       demo: '#',
-      github: '#', // Placeholder as URL wasn't explicit in text
+      github: '#',
     },
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     tech: 'PHP, MySQL, AJAX',
     description:
       'Designed a full-stack web application with session security. Implemented OWASP Top 10 protections (SQLi, CSRF, XSS), IP-based rate limiting, and Two-Factor Authentication (2FA).',
-    image: 'https://placehold.co/600x400?text=Classroom+Booking',
+    image: '/projects/classroom-booking.png',
     links: {
       demo: 'https://classroombookingapp.infinityfreeapp.com/classRoomBookings.php',
       github: 'https://github.com/EpicVibeCoder/ClassroomProject',
@@ -32,7 +32,7 @@ const projects = [
     tech: 'Next.js, Tailwind CSS',
     description:
       'Built a responsive, SEO-friendly landing page achieving Lighthouse scores above 90%. Optimized performance and created custom scroll animations.',
-    image: 'https://placehold.co/600x400?text=Restaurant+Landing+Page',
+    image: '/projects/restaurant-landing.png',
     links: {
       demo: 'https://interview-sample.vercel.app/',
       github: 'https://github.com/EpicVibeCoder/interview_sample',
@@ -43,7 +43,7 @@ const projects = [
     tech: 'React, Node.js, Solidity, MongoDB',
     description:
       'Architected a hybrid DApp using Node.js middleware to bridge React with Ethereum. Engineered a scalable Solidity smart contract for concurrent elections and gas-optimized storage.',
-    image: 'https://placehold.co/600x400?text=Blockchain+Voting',
+    image: '/projects/blockchain-voting.png',
     links: {
       demo: 'https://www.loom.com/share/acd4eab6c2bd4e8d9b7279d60915be1e',
       github: 'https://github.com/EpicVibeCoder/FYDP',
@@ -73,7 +73,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform"
+                  className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-110 transform"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-cocoa-900 to-transparent opacity-60" />
               </div>
