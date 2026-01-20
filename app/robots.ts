@@ -1,14 +1,14 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = 'https://epicvibecoder.com'; // Replace with your actual domain
+    const baseUrl = "https://epicvibecoder.com"; // Replace with your actual domain
 
     return {
         rules: {
-            userAgent: '*',
-            allow: '/',
-            disallow: '/private/', // Example of disallowed path
+            userAgent: "*",
+            allow: "/",
         },
         sitemap: `${baseUrl}/sitemap.xml`,
+        host: baseUrl,
     };
 }

@@ -1,11 +1,11 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Page() {
     return (
@@ -14,23 +14,58 @@ export default function Page() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'Person',
-                        name: 'EpicVibeCoder',
-                        url: 'https://epicvibecoder.com',
-                        image: 'https://epicvibecoder.com/og-image.png', // Ensure this exists
-                        sameAs: [
-                            'https://github.com/EpicVibeCoder',
-                            'https://twitter.com/EpicVibeCoder',
-                            'https://linkedin.com/in/EpicVibeCoder', // Add actual links if available
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "WebSite",
+                                "@id": "https://epicvibecoder.com/#website",
+                                url: "https://epicvibecoder.com",
+                                name: "EpicVibeCoder Portfolio",
+                                description: "Premium Full-Stack Developer Portfolio",
+                                publisher: {
+                                    "@id": "https://epicvibecoder.com/#person",
+                                },
+                            },
+                            {
+                                "@type": "ProfilePage",
+                                "@id": "https://epicvibecoder.com/#webpage",
+                                url: "https://epicvibecoder.com",
+                                name: "About EpicVibeCoder",
+                                isPartOf: {
+                                    "@id": "https://epicvibecoder.com/#website",
+                                },
+                                mainEntity: {
+                                    "@id": "https://epicvibecoder.com/#person",
+                                },
+                            },
+                            {
+                                "@type": "Person",
+                                "@id": "https://epicvibecoder.com/#person",
+                                name: "EpicVibeCoder",
+                                url: "https://epicvibecoder.com",
+                                image: {
+                                    "@type": "ImageObject",
+                                    url: "https://epicvibecoder.com/og-image.png",
+                                    width: 1200,
+                                    height: 630,
+                                },
+                                sameAs: ["https://github.com/EpicVibeCoder", "https://twitter.com/EpicVibeCoder", "https://linkedin.com/in/EpicVibeCoder"],
+                                jobTitle: "Full-stack Developer",
+                                worksFor: {
+                                    "@type": "Organization",
+                                    name: "Freelance / Self-Employed",
+                                },
+                                description: "Full-stack developer specializing in Next.js, React, Node.js, and Blockchain. Turning bold ideas into reality.",
+                                knowsAbout: [
+                                    { "@type": "Thing", name: "React", sameAs: "https://react.dev/" },
+                                    { "@type": "Thing", name: "Next.js", sameAs: "https://nextjs.org/" },
+                                    { "@type": "Thing", name: "Node.js", sameAs: "https://nodejs.org/" },
+                                    { "@type": "Thing", name: "Blockchain", sameAs: "https://en.wikipedia.org/wiki/Blockchain" },
+                                    { "@type": "Thing", name: "TypeScript", sameAs: "https://www.typescriptlang.org/" },
+                                    { "@type": "Thing", name: "Solidity", sameAs: "https://soliditylang.org/" },
+                                ],
+                            },
                         ],
-                        jobTitle: 'Full-stack Developer',
-                        worksFor: {
-                            '@type': 'Organization',
-                            name: 'Freelance / Self-Employed',
-                        },
-                        description: 'Full-stack developer specializing in Next.js, React, Node.js, and Blockchain.',
-                        knowsAbout: ['React', 'Next.js', 'Node.js', 'Blockchain', 'Solidity', 'TypeScript'],
                     }),
                 }}
             />
