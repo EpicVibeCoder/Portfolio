@@ -16,19 +16,19 @@ const mysteryQuest = Mystery_Quest({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://epicvibecoder.com"),
+    metadataBase: new URL("https://www.epicvibecoder.com"),
     title: {
         default: "EpicVibeCoder | Premium Full-Stack Developer Portfolio",
         template: "%s | EpicVibeCoder",
     },
     description: "EpicVibeCoder is a Full-stack developer specializing in Next.js, React, Node.js, and Blockchain. Crafting pixel-perfect, secure, and scalable digital experiences.",
     keywords: ["EpicVibeCoder", "Vibe Coding", "Creative Coding", "Coding Vibe", "Software Engineer Portfolio", "Full-stack Developer", "Next.js Expert", "React Developer", "Blockchain Developer", "Node.js", "NestJS", "Web Development"],
-    authors: [{ name: "EpicVibeCoder", url: "https://epicvibecoder.com" }],
+    authors: [{ name: "EpicVibeCoder", url: "https://www.epicvibecoder.com" }],
     creator: "EpicVibeCoder",
     openGraph: {
         type: "profile",
         locale: "en_US",
-        url: "https://epicvibecoder.com",
+        url: "https://www.epicvibecoder.com",
         siteName: "EpicVibeCoder Portfolio",
         title: "EpicVibeCoder | Premium Full-Stack Developer Portfolio",
         description: "Need a premium website? I specialize in Next.js, React, and Blockchain. Let's build something amazing together.",

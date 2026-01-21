@@ -18,34 +18,34 @@ export default function Page() {
                         "@graph": [
                             {
                                 "@type": "WebSite",
-                                "@id": "https://epicvibecoder.com/#website",
-                                url: "https://epicvibecoder.com",
+                                "@id": "https://www.epicvibecoder.com/#website",
+                                url: "https://www.epicvibecoder.com",
                                 name: "EpicVibeCoder Portfolio",
                                 description: "Premium Full-Stack Developer Portfolio",
                                 publisher: {
-                                    "@id": "https://epicvibecoder.com/#person",
+                                    "@id": "https://www.epicvibecoder.com/#person",
                                 },
                             },
                             {
                                 "@type": "ProfilePage",
-                                "@id": "https://epicvibecoder.com/#webpage",
-                                url: "https://epicvibecoder.com",
+                                "@id": "https://www.epicvibecoder.com/#webpage",
+                                url: "https://www.epicvibecoder.com",
                                 name: "About EpicVibeCoder",
                                 isPartOf: {
-                                    "@id": "https://epicvibecoder.com/#website",
+                                    "@id": "https://www.epicvibecoder.com/#website",
                                 },
                                 mainEntity: {
-                                    "@id": "https://epicvibecoder.com/#person",
+                                    "@id": "https://www.epicvibecoder.com/#person",
                                 },
                             },
                             {
                                 "@type": "Person",
-                                "@id": "https://epicvibecoder.com/#person",
+                                "@id": "https://www.epicvibecoder.com/#person",
                                 name: "EpicVibeCoder",
-                                url: "https://epicvibecoder.com",
+                                url: "https://www.epicvibecoder.com",
                                 image: {
                                     "@type": "ImageObject",
-                                    url: "https://epicvibecoder.com/og-image.png",
+                                    url: "https://www.epicvibecoder.com/og-image.png",
                                     width: 1200,
                                     height: 630,
                                 },
