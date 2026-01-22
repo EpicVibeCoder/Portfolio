@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: "/",
+        canonical: "https://www.epicvibecoder.com/",
     },
     verification: {
         google: "google7c89e33d58a7b8a4", // derived from user's file
