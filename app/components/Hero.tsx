@@ -1,21 +1,10 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import Button from './ui/Button';
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import Button from "./ui/Button";
 
-import {
-    SiReact,
-    SiNextdotjs,
-    SiNodedotjs,
-    SiNestjs,
-    SiAndroid,
-    SiTypescript,
-    SiJavascript,
-    SiTailwindcss,
-    SiPostgresql,
-    SiGit,
-} from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiNodedotjs, SiNestjs, SiAndroid, SiTypescript, SiJavascript, SiTailwindcss, SiPostgresql, SiGit } from "react-icons/si";
 
 export default function Hero() {
     const [isMounted, setIsMounted] = useState(false);
@@ -41,7 +30,7 @@ export default function Hero() {
                         transition={{
                             duration: item.duration,
                             repeat: Infinity,
-                            ease: 'easeInOut',
+                            ease: "easeInOut",
                             delay: item.delay,
                         }}
                         style={{
@@ -65,17 +54,19 @@ export default function Hero() {
                         <br />
                         <span className="text-gradient-gold">Coder</span>
                     </h1>
-                    <p className="mx-auto mb-8 max-w-2xl text-xl leading-relaxed text-cream-100/80">
-                        Full-stack developer with practical experience in web, mobile, and blockchain development. Skilled in React, Next.js, Node.js,
-                        NestJS, and Android development, with a strong interest in building secure, scalable applications. Will vibe code my way to
-                        perfection.
-                    </p>
-                    <motion.div
-                        className="flex flex-col items-center justify-center gap-4 md:flex-row"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.4 }}
-                    >
+                    <div className="mx-auto mb-8 max-w-2xl">
+                        <h3 className="mb-4 font-display text-2xl font-semibold leading-tight text-gold-400 md:text-3xl">
+                            <span className="text-gradient-gold">Vibe coding at the speed of AI.</span>
+                            <br />
+                            <span className="text-gold-500">Built to scale. Secured by design.</span>
+                        </h3>
+                        <p className="text-xl leading-relaxed text-cream-100/80">
+                            {" "}
+                            I’m a full-stack engineer who fuses AI-powered workflows with real engineering discipline. I use tools like Cursor and Antigravity to accelerate development, but every output is refined with deep knowledge of security, scalability, and architecture. I vibe code fast, but
+                            I build smart—crafting production-ready applications across web, mobile, and blockchain that are secure, scalable, and battle-tested. AI boosts my speed. Engineering judgment guarantees quality. Rapid builds. Clean architecture. Strong security. Infinite vibes.
+                        </p>
+                    </div>
+                    <motion.div className="flex flex-col items-center justify-center gap-4 md:flex-row" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
                         <a href="#projects">
                             <Button className="px-10 py-4 text-lg">View My Work</Button>
                         </a>
@@ -85,12 +76,7 @@ export default function Hero() {
 
             {/* Chocolate Drip Overlay (Top) */}
             {isMounted && (
-                <motion.div
-                    initial={{ y: -100 }}
-                    animate={{ y: 0 }}
-                    transition={{ duration: 1, type: 'spring' }}
-                    className="pointer-events-none absolute left-0 top-0 w-full opacity-40 mix-blend-overlay"
-                >
+                <motion.div initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 1, type: "spring" }} className="pointer-events-none absolute left-0 top-0 w-full opacity-40 mix-blend-overlay">
                     {/* We can use the SVG here if we want, or just a CSS shape */}
                     <div className="h-32 w-full bg-gradient-to-b from-cocoa-900 to-transparent" />
                 </motion.div>
@@ -98,11 +84,7 @@ export default function Hero() {
 
             {/* Scroll Indicator */}
             {isMounted && (
-                <motion.div
-                    className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-gold-500/50"
-                    animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                >
+                <motion.div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-gold-500/50" animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }}>
                     <span className="text-xs uppercase tracking-widest">Scroll</span>
                     <div className="h-12 w-px bg-gradient-to-b from-gold-500 to-transparent" />
                 </motion.div>
@@ -115,8 +97,8 @@ const FLOATING_ITEMS = [
     // Left Side
     {
         Icon: SiReact,
-        top: '10%',
-        left: '5%',
+        top: "10%",
+        left: "5%",
         size: 80,
         duration: 7,
         delay: 0,
@@ -125,8 +107,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiNextdotjs,
-        top: '25%',
-        left: '15%',
+        top: "25%",
+        left: "15%",
         size: 60,
         duration: 8,
         delay: 1,
@@ -135,8 +117,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiNodedotjs,
-        top: '45%',
-        left: '8%',
+        top: "45%",
+        left: "8%",
         size: 40,
         duration: 6,
         delay: 2,
@@ -145,8 +127,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiNestjs,
-        top: '65%',
-        left: '12%',
+        top: "65%",
+        left: "12%",
         size: 70,
         duration: 9,
         delay: 0.5,
@@ -155,8 +137,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiAndroid,
-        top: '85%',
-        left: '4%',
+        top: "85%",
+        left: "4%",
         size: 50,
         duration: 7.5,
         delay: 1.5,
@@ -166,8 +148,8 @@ const FLOATING_ITEMS = [
     // Right Side
     {
         Icon: SiTypescript,
-        top: '15%',
-        right: '8%',
+        top: "15%",
+        right: "8%",
         size: 90,
         duration: 8.5,
         delay: 0.2,
@@ -176,8 +158,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiJavascript,
-        top: '35%',
-        right: '18%',
+        top: "35%",
+        right: "18%",
         size: 50,
         duration: 6.5,
         delay: 1.2,
@@ -186,8 +168,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiTailwindcss,
-        top: '55%',
-        right: '6%',
+        top: "55%",
+        right: "6%",
         size: 75,
         duration: 9.5,
         delay: 2.2,
@@ -196,8 +178,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiPostgresql,
-        top: '75%',
-        right: '15%',
+        top: "75%",
+        right: "15%",
         size: 45,
         duration: 7,
         delay: 0.8,
@@ -206,8 +188,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiGit,
-        top: '90%',
-        right: '5%',
+        top: "90%",
+        right: "5%",
         size: 65,
         duration: 8,
         delay: 1.8,
@@ -217,8 +199,8 @@ const FLOATING_ITEMS = [
     // Center / Spread
     {
         Icon: SiReact, // Reuse
-        top: '5%',
-        left: '40%',
+        top: "5%",
+        left: "40%",
         size: 30,
         duration: 10,
         delay: 0.5,
@@ -227,8 +209,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiNextdotjs, // Reuse
-        top: '12%',
-        right: '35%',
+        top: "12%",
+        right: "35%",
         size: 35,
         duration: 9,
         delay: 2.5,
@@ -237,8 +219,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiNodedotjs, // Reuse
-        bottom: '15%',
-        left: '35%',
+        bottom: "15%",
+        left: "35%",
         size: 40,
         duration: 8,
         delay: 1.5,
@@ -247,8 +229,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiNestjs, // Reuse
-        bottom: '8%',
-        right: '40%',
+        bottom: "8%",
+        right: "40%",
         size: 55,
         duration: 7,
         delay: 0.3,
@@ -258,8 +240,8 @@ const FLOATING_ITEMS = [
     // Extra fillers for density
     {
         Icon: SiAndroid, // Reuse
-        top: '30%',
-        left: '3%',
+        top: "30%",
+        left: "3%",
         size: 25,
         duration: 11,
         delay: 3,
@@ -268,8 +250,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiTypescript, // Reuse
-        bottom: '40%',
-        right: '2%',
+        bottom: "40%",
+        right: "2%",
         size: 28,
         duration: 12,
         delay: 0,
@@ -278,8 +260,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiJavascript, // Reuse
-        top: '50%',
-        left: '90%',
+        top: "50%",
+        left: "90%",
         size: 20,
         duration: 13,
         delay: 1,
@@ -288,8 +270,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiTailwindcss, // Reuse
-        top: '20%',
-        left: '80%',
+        top: "20%",
+        left: "80%",
         size: 22,
         duration: 14,
         delay: 2,
@@ -298,8 +280,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiPostgresql, // Reuse
-        bottom: '25%',
-        right: '85%',
+        bottom: "25%",
+        right: "85%",
         size: 24,
         duration: 15,
         delay: 4,
@@ -308,8 +290,8 @@ const FLOATING_ITEMS = [
     },
     {
         Icon: SiGit, // Reuse
-        top: '40%',
-        left: '60%',
+        top: "40%",
+        left: "60%",
         size: 18,
         duration: 16,
         delay: 5,
