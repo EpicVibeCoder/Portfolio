@@ -14,7 +14,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-cocoa-950" id="hero">
+        <section className="relative flex min-h-screen w-full items-start justify-center overflow-hidden bg-cocoa-950 py-32 md:h-screen md:items-center md:py-0" id="hero">
             {/* Background Gradient Mesh */}
             <div className="absolute inset-0 bg-cocoa-mesh opacity-60 mix-blend-soft-light" aria-hidden="true" />
 
@@ -48,19 +48,19 @@ export default function Hero() {
             {/* Main Content */}
             <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
                 <div className="transform-none opacity-100">
-                    <h2 className="mb-4 font-display text-2xl tracking-wide text-gold-500 md:text-3xl">Hello, I am</h2>
-                    <h1 className="mb-6 font-serif text-5xl font-bold leading-tight text-cream-50 md:text-8xl">
+                    <h2 className="mb-2 font-display text-xl tracking-wide text-gold-500 md:mb-4 md:text-3xl">Hello, I am</h2>
+                    <h1 className="mb-4 font-serif text-4xl font-bold leading-tight text-cream-50 md:mb-6 md:text-8xl">
                         EpicVibe
                         <br />
                         <span className="text-gradient-gold">Coder</span>
                     </h1>
-                    <div className="mx-auto mb-8 max-w-2xl">
-                        <h3 className="mb-4 font-display text-2xl font-semibold leading-tight text-gold-400 md:text-3xl">
+                    <div className="mx-auto mb-6 max-w-2xl md:mb-8">
+                        <h3 className="mb-3 font-display text-lg font-semibold leading-tight text-gold-400 md:mb-4 md:text-3xl">
                             <span className="text-gradient-gold">Vibe coding at the speed of AI.</span>
                             <br />
                             <span className="text-gold-500">Built to scale. Secured by design.</span>
                         </h3>
-                        <p className="text-xl leading-relaxed text-cream-100/80">
+                        <p className="text-base leading-relaxed text-cream-100/80 md:text-xl">
                             {" "}
                             I’m a full-stack engineer who fuses AI-powered workflows with real engineering discipline. I use tools like Cursor and Antigravity to accelerate development, but every output is refined with deep knowledge of security, scalability, and architecture. I vibe code fast, but
                             I build smart—crafting production-ready applications across web, mobile, and blockchain that are secure, scalable, and battle-tested. AI boosts my speed. Engineering judgment guarantees quality. Rapid builds. Clean architecture. Strong security. Infinite vibes.
@@ -84,7 +84,7 @@ export default function Hero() {
 
             {/* Scroll Indicator */}
             {isMounted && (
-                <motion.div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-gold-500/50" animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }}>
+                <motion.div className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-gold-500/50 md:flex" animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }}>
                     <span className="text-xs uppercase tracking-widest">Scroll</span>
                     <div className="h-12 w-px bg-gradient-to-b from-gold-500 to-transparent" />
                 </motion.div>
