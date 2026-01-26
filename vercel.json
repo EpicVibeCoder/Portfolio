@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "epicvibecoder.com"
+          "value": "www.epicvibecoder.com"
         }
       ],
-      "destination": "https://www.epicvibecoder.com/$1",
+      "destination": "https://epicvibecoder.com/$1",
       "permanent": true
     }
   ]

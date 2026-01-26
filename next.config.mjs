@@ -11,16 +11,16 @@ const nextConfig = {
     },
     async redirects() {
         return [
-            // Redirect non-www to www (301 permanent redirect)
+            // Redirect www to non-www (301 permanent redirect)
             {
                 source: '/:path*',
                 has: [
                     {
                         type: 'host',
-                        value: 'epicvibecoder.com',
+                        value: 'www.epicvibecoder.com',
                     },
                 ],
-                destination: 'https://www.epicvibecoder.com/:path*',
+                destination: 'https://epicvibecoder.com/:path*',
                 permanent: true,
             },
         ];
