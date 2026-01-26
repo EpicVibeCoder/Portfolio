@@ -50,19 +50,8 @@ export default function Footer() {
                         aria-label="Copy email address"
                     >
                         <FaEnvelope className="transition-transform group-hover:scale-110" />
-                        <span>ashiq.upwork.profile@gmail.com</span>
+                        <span>hello@epicvibecoder.com</span>
                     </button>
-
-                    <a
-                        href="https://wa.me/8801726848226"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-cream-200/80 flex items-center gap-3 transition-colors hover:text-gold-500"
-                    >
-                        <FaWhatsapp />
-                        <span>+880 1726-848226</span>
-                    </a>
-
                     <a
                         href="https://www.google.com/maps/search/?api=1&query=Bashundhara+R%2FA,+Dhaka"
                         target="_blank"
