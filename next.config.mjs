@@ -9,22 +9,7 @@ const nextConfig = {
             },
         ],
     },
-    async redirects() {
-        return [
-            // Redirect www to non-www (301 permanent redirect)
-            {
-                source: '/:path*',
-                has: [
-                    {
-                        type: 'host',
-                        value: 'www.epicvibecoder.com',
-                    },
-                ],
-                destination: 'https://epicvibecoder.com/:path*',
-                permanent: true,
-            },
-        ];
-    },
+    // Redirect from www to non-www is handled in vercel.json
 };
 
 export default nextConfig;
