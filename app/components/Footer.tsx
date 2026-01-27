@@ -10,7 +10,7 @@ export default function Footer() {
 
     const handleCopyEmail = (e: React.MouseEvent) => {
         e.preventDefault();
-        navigator.clipboard.writeText('ashiq.upwork.profile@gmail.com');
+        navigator.clipboard.writeText('hello@epicvibecoder.com');
         setShowCopied(true);
         setTimeout(() => setShowCopied(false), 2000);
     };
