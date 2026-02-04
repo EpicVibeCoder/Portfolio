@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import clsx from "clsx";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Button from "./ui/Button";
@@ -46,7 +46,7 @@ export default function Navbar() {
                 </a>
 
                 {/* Desktop Nav */}
-                <div className="hidden items-center gap-8 md:flex">
+                <div className="hidden items-center gap-8 min-[992px]:flex">
                     {navItems.map((link) => (
                         <a key={link.name} href={link.href} className="text-sm font-medium uppercase tracking-wider text-cream-100 transition-colors hover:text-gold-400">
                             {link.name}
@@ -60,14 +60,14 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Toggle */}
-                <button className="text-2xl text-cream-100 md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu">
+                <button className="text-2xl text-cream-100 min-[992px]:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu">
                     {mobileMenuOpen ? <FaTimes /> : <FaBars />}
                 </button>
             </div>
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-cocoa-900/95 py-4 backdrop-blur-xl md:hidden">
+                <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-cocoa-900/95 py-4 backdrop-blur-xl min-[992px]:hidden">
                     <ul className="space-y-4 px-4">
                         {navItems.map((link) => (
                             <li key={link.name}>

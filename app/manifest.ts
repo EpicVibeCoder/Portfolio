@@ -11,19 +11,19 @@ export default function manifest(): MetadataRoute.Manifest {
         theme_color: "#cfa640", // gold-500
         icons: [
             {
-                src: "/favicon.ico",
+                src: "/favicon.svg",
                 sizes: "any",
-                type: "image/x-icon",
+                type: "image/svg+xml",
             },
             {
-                src: "/icon.png", // need to ensure we have an icon, or at least define it for when it exists
+                src: "/favicon.svg",
                 sizes: "192x192",
-                type: "image/png",
+                type: "image/svg+xml",
             },
             {
-                src: "/icon.png",
+                src: "/favicon.svg",
                 sizes: "512x512",
-                type: "image/png",
+                type: "image/svg+xml",
             },
         ],
     };

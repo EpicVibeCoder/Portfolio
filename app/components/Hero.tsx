@@ -48,18 +48,20 @@ export default function Hero() {
             {/* Main Content */}
             <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
                 <div className="transform-none opacity-100">
-                    <h2 className="mb-2 font-display text-xl tracking-wide text-gold-500 md:mb-4 md:text-3xl">Hello, I am</h2>
+                    <h3 className="mb-2 font-display text-xl tracking-wide text-gold-500 md:mb-4 md:text-3xl">Hello, I am</h3>
                     <h1 className="mb-4 font-serif text-4xl font-bold leading-tight text-cream-50 md:mb-6 md:text-8xl">
                         EpicVibe
                         <br />
                         <span className="text-gradient-gold">Coder</span>
                     </h1>
                     <div className="mx-auto mb-6 max-w-2xl md:mb-8">
-                        <h3 className="mb-3 font-display text-lg font-semibold leading-tight text-gold-400 md:mb-4 md:text-3xl">
+                        <h2 className="mb-3 font-display text-lg font-semibold leading-tight text-gold-400 md:mb-4 md:text-3xl">
                             <span className="text-gradient-gold">Vibe coding at the speed of AI.</span>
-                            <br />
-                            <span className="text-gold-500">Built to scale. Secured by design.</span>
+                        </h2>
+                        <h3>
+                        <span className="text-2xl text-gradient-gold font-semibold leading-tight font-display">Built to scale. Secured by design.</span>
                         </h3>
+                        
                         <p className="text-base leading-relaxed text-cream-100/80 md:text-xl">
                             {" "}
                             I’m a full-stack engineer who fuses AI-powered workflows with real engineering discipline. I use tools like Cursor and Antigravity to accelerate development, but every output is refined with deep knowledge of security, scalability, and architecture. I vibe code fast, but

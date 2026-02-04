@@ -17,6 +17,9 @@ const mysteryQuest = Mystery_Quest({
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://epicvibecoder.com"),
+    icons: {
+        icon: "/favicon.svg",
+    },
     title: {
         default: "EpicVibeCoder | Premium Full-Stack Developer Portfolio",
         template: "%s | EpicVibeCoder",
