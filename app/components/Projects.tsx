@@ -15,6 +15,16 @@ const projects = [
         },
     },
     {
+        title: "fileManager API",
+        tech: "Node.js, MongoDB, Docker",
+        description: "Robust Node.js API for secure file storage with folder management, file operations, Favorites, Dashboard, a secure Vault (PIN-protected), and Calendar integration. Includes Google OAuth and OTP-based password reset.",
+        image: "https://placehold.co/600x400?text=Storage+API",
+        links: {
+            demo: "#",
+            github: "https://github.com/EpicVibeCoder/fileManager",
+        },
+    },
+    {
         title: "Classroom Booking System",
         tech: "PHP, MySQL, AJAX",
         description: "Designed a full-stack web application with session security. Implemented OWASP Top 10 protections (SQLi, CSRF, XSS), IP-based rate limiting, and Two-Factor Authentication (2FA).",
