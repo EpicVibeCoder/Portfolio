@@ -8,10 +8,10 @@ const projects = [
         title: "Mini E-Commerce API",
         tech: "NestJS, Prisma, MySQL, Redis",
         description: "Designed a scalable backend REST API with modular architecture. Implemented secure auth, role-based access, Stripe payments, Redis caching, and graph traversal for product recommendations. Containerized with Docker.",
-        image: "https://placehold.co/600x400?text=E-Commerce+API", // No screenshot provided yet
+        image: "/projects/eshop.png",
         links: {
-            demo: "#",
-            github: "https://github.com/EpicVibeCoder/mini-ecommerce-api",
+            demo: "https://demo-commerce-gray.vercel.app/",
+            github: "#",
         },
     },
     {
@@ -85,12 +85,12 @@ export default function Projects() {
 
                                 <div className="mt-auto flex gap-4">
                                     {project.links.github !== "#" && (
-                                        <a href={project.links.github} target="_blank" rel="noreferrer" className="border-b border-transparent text-sm font-bold text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-500">
+                                        <a href={project.links.github} target="_blank" rel="noreferrer" className="border-b border-transparent text-sm font-bold text-gold-500 underline transition-colors hover:border-gold-500 hover:text-gold-500">
                                             GitHub
                                         </a>
                                     )}
                                     {project.links.demo !== "#" && (
-                                        <a href={project.links.demo} target="_blank" rel="noreferrer" className="border-b border-transparent text-sm font-bold text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-500">
+                                        <a href={project.links.demo} target="_blank" rel="noreferrer" className="border-b border-transparent text-sm font-bold transition-colors text-gold-500 underline hover:border-gold-500 hover:text-gold-500">
                                             Live Demo
                                         </a>
                                     )}
