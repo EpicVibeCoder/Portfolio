@@ -15,6 +15,17 @@ const projects = [
         },
     },
     {
+        title: "School Management System",
+        tech: "ASP.NET Core, Next.js, PostgreSQL, Docker",
+        description:
+            "Full-stack academic platform with JWT RBAC for Admin, Teacher, and Student roles. Manage users, classes, subjects, enrollments, assignments, submissions, grading, and notifications. Includes FluentValidation, TanStack Query, EF Core migrations, and a Postman collection for API testing.",
+        image: "/projects/schoolManagement.png",
+        links: {
+            demo: "https://school-management-net-chi.vercel.app",
+            github: "https://github.com/EpicVibeCoder/SchoolManagement-.net-",
+        },
+    },
+    {
         title: "fileManager API",
         tech: "Node.js, MongoDB, Docker",
         description: "Robust Node.js API for secure file storage with folder management, file operations, Favorites, Dashboard, a secure Vault (PIN-protected), and Calendar integration. Includes Google OAuth and OTP-based password reset.",
