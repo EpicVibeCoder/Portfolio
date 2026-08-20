@@ -11,7 +11,7 @@ const projects = [
         image: "/projects/eshop.png",
         links: {
             demo: "https://demo-commerce-gray.vercel.app/",
-            github: "#",
+            github: "https://github.com/EpicVibeCoder/mini-ecommerce-api",
         },
     },
     {
@@ -74,7 +74,14 @@ export default function Projects() {
                         >
                             {/* Project Image Placeholder */}
                             <div className="relative h-48 w-full overflow-hidden bg-cocoa-800/50">
-                                <Image src={project.image} alt={project.title} fill unoptimized={project.image.startsWith("https://placehold.co")} className="transform object-cover opacity-80 transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100" />
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    unoptimized={project.image.startsWith("https://placehold.co")}
+                                    className="transform object-cover opacity-80 transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100"
+                                />
                                 <div className="absolute inset-0 bg-gradient-to-t from-cocoa-900 to-transparent opacity-60" />
                             </div>
 
@@ -90,7 +97,7 @@ export default function Projects() {
                                         </a>
                                     )}
                                     {project.links.demo !== "#" && (
-                                        <a href={project.links.demo} target="_blank" rel="noreferrer" className="border-b border-transparent text-sm font-bold transition-colors text-gold-500 underline hover:border-gold-500 hover:text-gold-500">
+                                        <a href={project.links.demo} target="_blank" rel="noreferrer" className="border-b border-transparent text-sm font-bold text-gold-500 underline transition-colors hover:border-gold-500 hover:text-gold-500">
                                             Live Demo
                                         </a>
                                     )}
