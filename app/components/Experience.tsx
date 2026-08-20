@@ -14,7 +14,7 @@ export default function Experience() {
             <div className="relative z-10 mx-auto max-w-5xl">
                 <h2 className="section-title-center">My Journey</h2>
 
-                <div className="ml-4 space-y-12 border-l-2 border-gold-500/20 md:ml-0 md:pl-0">
+                <div className="ml-4 space-y-12 border-l-2 border-gold-500/20 md:ml-0 md:border-l-0">
                     {/* Experience Items */}
                     {EXPERIENCES.map((item, index) => (
                         <motion.div
@@ -23,15 +23,12 @@ export default function Experience() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="group relative pl-8 md:grid md:grid-cols-5 md:gap-8 md:pl-0"
+                            className="group relative pl-8 md:grid md:grid-cols-5 md:items-start md:gap-8 md:pl-0"
                         >
-                            {/* Dot */}
-                            <div className="absolute left-[-5px] top-2 h-3 w-3 rounded-full bg-gold-500 ring-4 ring-cocoa-950 transition-colors group-hover:bg-gold-300 md:left-auto md:right-[-6px] md:col-start-2 md:row-start-1 md:hidden" />
-
-                            {/* Date */}
-                            <div className="mb-2 font-mono text-sm uppercase tracking-wider text-gold-400 md:relative md:col-span-1 md:mb-0 md:border-r-2 md:border-gold-500/20 md:pr-8 md:text-right">
-                                <div className="absolute right-[-5px] top-2 hidden h-3 w-3 rounded-full bg-gold-500 ring-4 ring-cocoa-950 transition-colors group-hover:bg-gold-300 md:block" />
-                                {item.year}
+                            {/* Date + timeline dot (aligned with card title / p-6) */}
+                            <div className="relative mb-2 font-mono text-sm uppercase leading-snug tracking-wider text-gold-400 md:col-span-1 md:mb-0 md:self-stretch md:border-r-2 md:border-gold-500/20 md:pr-8 md:pt-6 md:text-right">
+                                <span className="block">{item.start}</span>
+                                <span className="block">{item.end}</span>
                             </div>
 
                             {/* Content */}
@@ -50,21 +47,24 @@ export default function Experience() {
 
 const EXPERIENCES = [
     {
-        year: 'Mar 2019 - Oct 2019',
+        start: 'Mar 2019',
+        end: 'Oct 2019',
         title: 'Full Stack & Mobile Developer',
         company: 'GPS Bangla',
         description:
             'Worked on mobile app development using NativeScript and JavaScript. Assisted backend development with ASP.NET MVC. Built the company portfolio website in React. Collaborated with offshore teams on mobile UI and feature delivery.',
     },
     {
-        year: 'Oct 2017 - Jan 2018',
+        start: 'Oct 2017',
+        end: 'Jan 2018',
         title: 'Full Stack Developer',
         company: 'VisionBlue Inc.',
         description:
             'Developed native Android applications using Java and Android Studio. Built UI screens, integrated REST APIs, and implemented new feature modules. Reskinned apps, added authentication, and optimized layouts. Worked closely with clients and backend developers.',
     },
     {
-        year: 'Jun 2017 - Aug 2017',
+        start: 'Jun 2017',
+        end: 'Aug 2017',
         title: 'Android Developer',
         company: 'Parallaxlogic Infotech',
         description:
