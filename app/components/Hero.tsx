@@ -65,7 +65,7 @@ export default function Hero() {
                         <p className="text-base leading-relaxed text-cream-100/80 md:text-xl">
                             {" "}
                             I’m a full-stack engineer who fuses AI-powered workflows with real engineering discipline. I use tools like Cursor and Antigravity to accelerate development, but every output is refined with deep knowledge of security, scalability, and architecture. I vibe code fast, but
-                            I build smart—crafting production-ready applications across web, mobile, and blockchain that are secure, scalable, and battle-tested. AI boosts my speed. Engineering judgment guarantees quality. Rapid builds. Clean architecture. Strong security. Infinite vibes.
+                            I build smart, crafting production-ready applications across web, mobile, and blockchain that are secure, scalable, and battle-tested. AI boosts my speed. Engineering judgment guarantees quality. Rapid builds. Clean architecture. Strong security. Infinite vibes.
                         </p>
                     </div>
                     <motion.div className="flex flex-col items-center justify-center gap-4 md:flex-row" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
