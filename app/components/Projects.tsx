@@ -26,13 +26,13 @@ const projects = [
         },
     },
     {
-        title: "fileManager API",
-        tech: "Node.js, MongoDB, Docker",
-        description: "Robust Node.js API for secure file storage with folder management, file operations, Favorites, Dashboard, a secure Vault (PIN-protected), and Calendar integration. Includes Google OAuth and OTP-based password reset.",
-        image: "https://placehold.co/600x400?text=fileManager+API",
+        title: "CloudBox",
+        tech: "Express, React Native, Expo, MongoDB, Turborepo, Docker",
+        description: "Self-hosted personal cloud in a Turborepo monorepo. Express 5 + MongoDB API with an Expo (React Native) mobile client. File/folder hierarchy, PIN vault, storage dashboard, calendar view, favorites, JWT auth, Google OAuth, and OTP password reset.",
+        image: "https://placehold.co/600x400?text=CloudBox",
         links: {
             demo: "#",
-            github: "https://github.com/EpicVibeCoder/fileManager",
+            github: "https://github.com/EpicVibeCoder/fileManagerMobileApp/tree/main",
         },
     },
     {
