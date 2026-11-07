@@ -160,13 +160,15 @@ main {
 
 .solar-system {
   position: absolute;
+  z-index: 0;
   top: 50%;
   left: 50%;
-  width: min(72vw, 920px);
+  width: min(78vw, 980px);
   aspect-ratio: 1;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  opacity: 0.8;
+  opacity: 0.34;
+  mix-blend-mode: screen;
 }
 
 .solar-sun {
