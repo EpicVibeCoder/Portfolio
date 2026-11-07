@@ -81,7 +81,7 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="group flex flex-col overflow-hidden border border-white/10 bg-cocoa-900/70 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-accent/60 hover:shadow-[8px_8px_0_rgb(190_255_63_/_0.12)]"
+                            className="group flex flex-col overflow-hidden border border-cocoa-700/40 bg-cocoa-900/90 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-accent/60 hover:shadow-[8px_8px_0_rgb(190_255_63_/_0.12)]"
                         >
                             {/* Project Image Placeholder */}
                             <div className="relative h-48 w-full overflow-hidden bg-cocoa-800/50">
@@ -99,7 +99,7 @@ export default function Projects() {
                             <div className="flex flex-grow flex-col p-6">
                                 <h3 className="mb-2 text-2xl font-bold text-cream-50 transition-colors group-hover:text-gold-400">{project.title}</h3>
                                 <p className="mb-4 font-mono text-xs uppercase tracking-wider text-gold-500/80">{project.tech}</p>
-                                <p className="text-cream-200/80 mb-6 flex-grow text-sm leading-relaxed">{project.description}</p>
+                                <p className="text-cream-100 mb-6 flex-grow text-sm leading-relaxed">{project.description}</p>
 
                                 <div className="mt-auto flex gap-4">
                                     {project.links.github !== "#" && (

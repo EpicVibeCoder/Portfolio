@@ -32,10 +32,10 @@ export default function Experience() {
                             </div>
 
                             {/* Content */}
-                            <div className="rounded-xl border border-white/5 bg-cocoa-900/50 p-6 transition-colors hover:border-gold-500/30 md:col-span-4">
+                            <div className="rounded-xl border border-cocoa-700/40 bg-cocoa-900/70 p-6 transition-colors hover:border-gold-500/30 md:col-span-4">
                                 <h3 className="text-xl font-bold text-cream-50">{item.title}</h3>
                                 <h4 className="mb-4 text-gold-500/80">{item.company}</h4>
-                                <p className="text-cream-200/70 text-sm">{item.description}</p>
+                                <p className="text-cream-100 text-sm">{item.description}</p>
                             </div>
                         </motion.div>
                     ))}

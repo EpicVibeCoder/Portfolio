@@ -16,7 +16,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className="relative border-t border-white/5 bg-cocoa-900 px-6 pb-8 pt-16">
+        <footer className="relative border-t border-cocoa-700/40 bg-cocoa-900/95 px-6 pb-8 pt-16">
             <AnimatePresence>
                 {showCopied && (
                     <motion.div
@@ -35,30 +35,30 @@ export default function Footer() {
                 {/* Brand & Summary */}
                 <div>
                     <h2 className="mb-6 font-display text-3xl text-gold-500">EpicVibeCoder</h2>
-                    <p className="text-cream-200/60 max-w-sm leading-relaxed">Building secure, scalable, and user-centric digital solutions using modern technologies.</p>
+                    <p className="text-cream-100 max-w-sm leading-relaxed">Building secure, scalable, and user-centric digital solutions using modern technologies.</p>
                 </div>
 
                 {/* Contact Info */}
                 <div className="flex flex-col gap-6 md:items-end">
                     <h3 className="mb-2 font-serif text-xl text-cream-50">Contact</h3>
 
-                    <button onClick={handleCopyEmail} className="text-cream-200/80 group flex items-center gap-3 transition-colors hover:text-gold-500" aria-label="Copy email address">
+                    <button onClick={handleCopyEmail} className="text-cream-100 group flex items-center gap-3 transition-colors hover:text-gold-500" aria-label="Copy email address">
                         <FaEnvelope className="transition-transform group-hover:scale-110" />
                         <span>hello@epicvibecoder.com</span>
                     </button>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Bashundhara+R%2FA,+Dhaka" target="_blank" rel="noreferrer" className="text-cream-200/80 flex items-center gap-3 transition-colors hover:text-gold-500">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Bashundhara+R%2FA,+Dhaka" target="_blank" rel="noreferrer" className="text-cream-100 flex items-center gap-3 transition-colors hover:text-gold-500">
                         <FaMapMarkerAlt />
                         <span>Bashundhara R/A, Dhaka</span>
                     </a>
 
-                    <a href="https://github.com/EpicVibeCoder" target="_blank" rel="noreferrer" className="text-cream-200/80 flex items-center gap-3 transition-colors hover:text-gold-500">
+                    <a href="https://github.com/EpicVibeCoder" target="_blank" rel="noreferrer" className="text-cream-100 flex items-center gap-3 transition-colors hover:text-gold-500">
                         <FaGithub />
                         <span>EpicVibeCoder</span>
                     </a>
                 </div>
             </div>
 
-            <div className="text-cream-200/40 mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-sm md:flex-row">
+            <div className="text-cream-100/80 mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-cocoa-700/40 pt-8 text-sm md:flex-row">
                 <p className="flex items-center gap-4">
                     <span>© {currentYear} EpicVibeCoder. All rights reserved.</span>
                     <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="text-gold-500/80 underline decoration-gold-500/50 underline-offset-2 transition-colors hover:text-gold-400 hover:decoration-gold-400">

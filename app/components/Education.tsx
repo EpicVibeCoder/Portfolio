@@ -14,7 +14,7 @@ export default function Education() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="flex flex-col items-center gap-8 rounded-2xl border border-gold-500/10 bg-cocoa-900/40 p-8 backdrop-blur-sm md:flex-row md:items-start"
+                    className="flex flex-col items-center gap-8 rounded-2xl border border-gold-500/30 bg-cocoa-900/75 p-8 backdrop-blur-sm md:flex-row md:items-start"
                 >
                     <div className="shrink-0 rounded-full bg-gold-500/10 p-4 text-gold-500">
                         <FaGraduationCap size={40} />

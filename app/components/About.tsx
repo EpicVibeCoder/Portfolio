@@ -159,7 +159,7 @@ export default function About() {
                     className="mx-auto mb-16 max-w-3xl text-center"
                 >
                     <h2 className="section-title-center">About Me</h2>
-                    <p className="text-xl leading-relaxed text-cream-100/90">
+                    <p className="text-xl leading-relaxed text-cream-100">
                         I'm <span className="font-bold text-gold-500">EpicVibeCoder</span> – a developer who thrives on building cool, complex, and
                         scalable systems. From crafting sleek UIs in Next.js to architecting secure blockchain DApps and robust NestJS backends, I
                         write code that works as good as it looks. I turn coffee into clean code and complex problems into elegant solutions.
@@ -175,14 +175,14 @@ export default function About() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="rounded-2xl border border-white/5 bg-cocoa-950/40 p-6 transition-colors hover:border-gold-500/20"
+                            className="rounded-2xl border border-cocoa-700/40 bg-cocoa-950/70 p-6 transition-colors hover:border-gold-500/20"
                         >
-                            <h3 className="mb-4 border-b border-white/5 pb-2 font-serif text-xl text-gold-400">{category.title}</h3>
+                            <h3 className="mb-4 border-b border-cocoa-700/40 pb-2 font-serif text-xl text-gold-400">{category.title}</h3>
                             <div className="flex flex-wrap gap-2">
                                 {category.skills.map((skill) => (
                                     <span
                                         key={skill.name}
-                                        className="text-cream-200 flex cursor-default items-center gap-2 rounded-full border border-white/5 bg-cocoa-800/50 px-3 py-1 font-mono text-xs transition-all hover:border-gold-500/40 hover:text-gold-300"
+                                        className="text-cream-100 flex cursor-default items-center gap-2 rounded-full border border-cocoa-700/40 bg-cocoa-800/80 px-3 py-1 font-mono text-xs transition-all hover:border-gold-500/40 hover:text-gold-300"
                                     >
                                         <skill.icon className={`${skill.color} text-sm`} />
                                         {skill.name}

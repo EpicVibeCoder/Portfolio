@@ -71,7 +71,7 @@ export default function Navbar() {
                     <button
                         type="button"
                         onClick={toggleTheme}
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-400"
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-cocoa-700/50 text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-400"
                         aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
                     >
                         {isLight ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
@@ -88,7 +88,7 @@ export default function Navbar() {
                     <button
                         type="button"
                         onClick={toggleTheme}
-                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-400"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-cocoa-700/50 text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-400"
                         aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
                     >
                         {isLight ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
@@ -101,7 +101,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-cocoa-900/95 py-4 backdrop-blur-xl min-[992px]:hidden">
+                <div className="mt-4 overflow-hidden rounded-xl border border-cocoa-700/50 bg-cocoa-900/95 py-4 backdrop-blur-xl min-[992px]:hidden">
                     <ul className="space-y-4 px-4">
                         {navItems.map((link) => (
                             <li key={link.name}>
