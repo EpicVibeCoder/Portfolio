@@ -45,9 +45,13 @@ export default function Hero() {
                     </motion.div>
                 ))}
 
-            {/* Cinematic framing */}
-            <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
-            <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
+            {/* A tiny solar system keeps the hero in motion without competing with the message. */}
+            <div className="solar-system" aria-hidden="true">
+                <div className="solar-sun" />
+                <div className="solar-orbit solar-orbit-one"><span className="solar-planet solar-planet-one" /></div>
+                <div className="solar-orbit solar-orbit-two"><span className="solar-planet solar-planet-two" /></div>
+                <div className="solar-orbit solar-orbit-three"><span className="solar-planet solar-planet-three" /></div>
+            </div>
             <div className="hero-signal absolute left-6 top-1/2 hidden -translate-y-1/2 font-mono text-[10px] uppercase tracking-[0.35em] text-gold-400/70 xl:block [writing-mode:vertical-rl]">
                 EVC / 2026 / SYSTEMS IN MOTION
             </div>

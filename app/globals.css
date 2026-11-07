@@ -158,32 +158,62 @@ main {
   background-size: 72px 72px;
 }
 
-.hero-orbit {
+.solar-system {
   position: absolute;
-  border: 1px solid rgb(190 255 63 / 0.2);
-  border-radius: 9999px;
+  top: 50%;
+  left: 50%;
+  width: min(72vw, 920px);
+  aspect-ratio: 1;
   pointer-events: none;
-  animation: epic-orbit 18s linear infinite;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
 }
 
-.hero-orbit-one {
-  width: min(70vw, 900px);
-  height: min(70vw, 900px);
-  border-right-color: transparent;
-  border-bottom-color: rgb(255 73 24 / 0.45);
+.solar-sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(24px, 3vw, 48px);
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, #fff7c2, #ff9d24 42%, #ff4918 72%, transparent 74%);
+  box-shadow: 0 0 34px rgb(255 157 36 / 0.65), 0 0 100px rgb(255 73 24 / 0.2);
+  transform: translate(-50%, -50%);
 }
 
-.hero-orbit-two {
-  width: min(48vw, 620px);
-  height: min(48vw, 620px);
-  border-left-color: rgb(255 73 24 / 0.45);
-  border-top-color: transparent;
-  animation-direction: reverse;
-  animation-duration: 12s;
+.solar-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgb(255 247 194 / 0.16);
+  border-radius: 9999px;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  animation: solar-spin 24s linear infinite;
 }
 
-@keyframes epic-orbit {
-  to { transform: rotate(360deg); }
+.solar-orbit-one { width: 30%; height: 30%; }
+.solar-orbit-two { width: 55%; height: 55%; animation-duration: 38s; animation-direction: reverse; transform: translate(-50%, -50%) rotate(28deg); }
+.solar-orbit-three { width: 82%; height: 82%; animation-duration: 58s; transform: translate(-50%, -50%) rotate(-38deg); }
+
+.solar-planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+
+.solar-planet-one { width: 7px; height: 7px; background: #f6d365; box-shadow: 0 0 12px rgb(246 211 101 / 0.8); }
+.solar-planet-two { width: 12px; height: 12px; background: #ff7a45; box-shadow: 0 0 16px rgb(255 122 69 / 0.7); }
+.solar-planet-three { width: 17px; height: 17px; background: #6fc3df; box-shadow: 0 0 18px rgb(111 195 223 / 0.65); }
+
+@keyframes solar-spin {
+  to { transform: translate(-50%, -50%) rotate(342deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solar-orbit { animation: none; }
 }
 
 .hero-signal { text-shadow: 0 0 18px rgb(255 73 24 / 0.4); }
