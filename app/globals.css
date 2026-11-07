@@ -45,6 +45,47 @@
 
     html {
         scroll-behavior: smooth;
+        color-scheme: dark;
+    }
+
+    html.light {
+        color-scheme: light;
+
+        --cocoa-50: 16 28 46;
+        --cocoa-100: 34 51 73;
+        --cocoa-200: 67 91 117;
+        --cocoa-300: 102 130 159;
+        --cocoa-400: 148 171 194;
+        --cocoa-500: 190 207 222;
+        --cocoa-600: 218 228 236;
+        --cocoa-700: 232 239 244;
+        --cocoa-800: 241 245 248;
+        --cocoa-900: 248 250 252;
+        --cocoa-950: 255 255 255;
+
+        --gold-50: 255 249 240;
+        --gold-100: 255 232 198;
+        --gold-200: 255 201 133;
+        --gold-300: 229 105 31;
+        --gold-400: 204 75 19;
+        --gold-500: 182 58 12;
+        --gold-600: 151 43 8;
+        --gold-700: 116 32 7;
+        --gold-800: 78 25 9;
+        --gold-900: 49 20 10;
+        --cream-50: 16 28 46;
+        --cream-100: 34 51 73;
+
+        --background: var(--cocoa-950);
+        --foreground: var(--cream-50);
+        --primary: var(--gold-500);
+        --primary-foreground: 255 255 255;
+        --secondary: var(--cocoa-800);
+        --secondary-foreground: var(--cream-50);
+        --accent: 71 116 0;
+        --muted: var(--cocoa-900);
+        --muted-foreground: var(--cocoa-200);
+        --border: 16 28 46;
     }
 
     body {

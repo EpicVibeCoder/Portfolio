@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 import Button from "./ui/Button";
 
 const navItems = [
@@ -18,7 +18,23 @@ const navItems = [
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isLight, setIsLight] = useState(false);
     const solidBg = mobileMenuOpen || isScrolled;
+
+    useEffect(() => {
+        const savedTheme = window.localStorage.getItem("portfolio-theme");
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        const light = savedTheme ? savedTheme === "light" : prefersLight;
+        setIsLight(light);
+        document.documentElement.classList.toggle("light", light);
+    }, []);
+
+    const toggleTheme = () => {
+        const nextIsLight = !isLight;
+        setIsLight(nextIsLight);
+        document.documentElement.classList.toggle("light", nextIsLight);
+        window.localStorage.setItem("portfolio-theme", nextIsLight ? "light" : "dark");
+    };
 
     useEffect(() => {
         let raf = 0;
@@ -52,6 +68,14 @@ export default function Navbar() {
                             {link.name}
                         </a>
                     ))}
+                    <button
+                        type="button"
+                        onClick={toggleTheme}
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-400"
+                        aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+                    >
+                        {isLight ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
+                    </button>
                     <a href="/EpicVibeCoder_CV.pdf" download="EpicVibeCoder_CV.pdf">
                         <Button variant="primary" className="px-6 py-2 text-sm">
                             Download CV
@@ -60,9 +84,19 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Toggle */}
-                <button className="text-2xl text-cream-100 min-[992px]:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu">
+                <div className="flex items-center gap-4 min-[992px]:hidden">
+                    <button
+                        type="button"
+                        onClick={toggleTheme}
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-400"
+                        aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+                    >
+                        {isLight ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
+                    </button>
+                    <button className="text-2xl text-cream-100" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu">
                     {mobileMenuOpen ? <FaTimes /> : <FaBars />}
-                </button>
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
