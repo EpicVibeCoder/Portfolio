@@ -45,8 +45,15 @@ export default function Hero() {
                     </motion.div>
                 ))}
 
+            {/* Cinematic framing */}
+            <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
+            <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
+            <div className="hero-signal absolute left-6 top-1/2 hidden -translate-y-1/2 font-mono text-[10px] uppercase tracking-[0.35em] text-gold-400/70 xl:block [writing-mode:vertical-rl]">
+                EVC / 2026 / SYSTEMS IN MOTION
+            </div>
+
             {/* Main Content */}
-            <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
+            <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
                 <div className="transform-none opacity-100">
                     <div className="mb-6 flex flex-col items-center gap-2">
                         <p className="eyebrow">// independent engineer · available for ambitious work</p>
