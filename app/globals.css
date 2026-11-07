@@ -123,6 +123,18 @@
         border-color: rgb(204 75 19 / 0.68);
     }
 
+    .logo-light {
+        display: none;
+    }
+
+    html.light .logo-dark {
+        display: none;
+    }
+
+    html.light .logo-light {
+        display: block;
+    }
+
     html.light input,
     html.light textarea,
     html.light select {

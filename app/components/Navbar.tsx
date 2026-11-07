@@ -58,7 +58,8 @@ export default function Navbar() {
         <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className={clsx("fixed left-0 right-0 top-0 z-50 px-6 py-4 transition-all duration-300", solidBg ? "glass-panel mx-4 mt-4 py-3" : "bg-transparent")}>
             <div className="mx-auto flex max-w-7xl items-center justify-between">
                 <a href="#" className="group flex items-center gap-3 text-cream-50 transition-colors hover:text-accent" aria-label="Epic Vibe Coder home">
-                    <img src="/favicon.svg" alt="Epic Vibe Coder logo" className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+                    <img src="/logo-dark.png" alt="Epic Vibe Coder logo" className="logo-dark h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+                    <img src="/logo-light.png" alt="" aria-hidden="true" className="logo-light h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110" />
                     <span className="font-mono text-sm font-bold uppercase tracking-[0.18em]">EVC<span className="text-gold-500">/</span>26</span>
                 </a>
 
