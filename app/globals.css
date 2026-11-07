@@ -135,14 +135,159 @@
         display: block;
     }
 
-    html.light input,
-    html.light textarea,
-    html.light select {
-        border-color: rgb(34 51 73 / 0.34);
-        background-color: rgb(255 248 237 / 0.92);
-        color: rgb(16 28 46);
-        box-shadow: 0 3px 0 rgb(204 75 19 / 0.1);
-    }
+html.light input,
+html.light textarea {
+  background: #fff7e8;
+  border-color: rgb(204 75 19 / 0.55);
+}
+
+/* Cinematic motion system: scroll reveals, a living grid, and tactile hover states. */
+@keyframes epic-reveal {
+  from { opacity: 0; transform: translateY(32px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes epic-line-grow {
+  from { transform: scaleX(0); transform-origin: left; }
+  to { transform: scaleX(1); transform-origin: left; }
+}
+
+main {
+  position: relative;
+  background-image: linear-gradient(rgb(255 255 255 / 0.025) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.solar-system {
+  position: absolute;
+  z-index: 0;
+  top: 30%;
+  left: 30vw;
+  width: min(72vw, 900px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0.34;
+  mix-blend-mode: screen;
+}
+
+.solar-sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(24px, 3vw, 48px);
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, #fff7c2, #ff9d24 42%, #ff4918 72%, transparent 74%);
+  box-shadow: 0 0 34px rgb(255 157 36 / 0.65), 0 0 100px rgb(255 73 24 / 0.2);
+  transform: translate(-50%, -50%);
+}
+
+.solar-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgb(255 247 194 / 0.16);
+  border-radius: 9999px;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  animation: solar-spin 24s linear infinite;
+}
+
+.solar-orbit-one { width: 30%; height: 30%; }
+.solar-orbit-two { width: 55%; height: 55%; animation-duration: 38s; animation-direction: reverse; transform: translate(-50%, -50%) rotate(28deg); }
+.solar-orbit-three { width: 82%; height: 82%; animation-duration: 58s; transform: translate(-50%, -50%) rotate(-38deg); }
+
+.solar-planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+
+.solar-planet-one { width: 7px; height: 7px; background: #f6d365; box-shadow: 0 0 12px rgb(246 211 101 / 0.8); }
+.solar-planet-two { width: 12px; height: 12px; background: #ff7a45; box-shadow: 0 0 16px rgb(255 122 69 / 0.7); }
+.solar-planet-three { width: 17px; height: 17px; background: #6fc3df; box-shadow: 0 0 18px rgb(111 195 223 / 0.65); }
+
+@keyframes solar-spin {
+  to { transform: translate(-50%, -50%) rotate(342deg); }
+}
+
+html.light .solar-system {
+  opacity: 0.62;
+  mix-blend-mode: multiply;
+}
+
+html.light .solar-system .solar-orbit {
+  border-color: rgba(20, 44, 72, 0.26);
+}
+
+html.light .solar-system .solar-sun {
+  box-shadow: 0 0 28px rgba(238, 113, 28, 0.5), 0 0 72px rgba(238, 113, 28, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solar-orbit { animation: none; }
+}
+
+.hero-signal { text-shadow: 0 0 18px rgb(255 73 24 / 0.4); }
+
+#hero h1 { text-shadow: 0 0 60px rgb(255 73 24 / 0.16); }
+
+#projects article, #experience article, #education article {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+#projects article:hover {
+  transform: translateY(-12px) rotateX(2deg) rotateY(-1deg);
+}
+
+#projects article img { filter: brightness(0.68) contrast(1.22) saturate(0.8); }
+#projects article:hover img { filter: brightness(0.86) contrast(1.12) saturate(1); }
+
+main > section {
+  position: relative;
+  isolation: isolate;
+  view-timeline-name: --section-view;
+  view-timeline-axis: block;
+}
+
+.glass-panel,
+main > section .group,
+main > section article {
+  transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 500ms ease, border-color 300ms ease;
+}
+
+.glass-panel:hover,
+main > section .group:hover,
+main > section article:hover {
+  transform: translateY(-6px) rotateX(1deg);
+  box-shadow: 0 22px 55px rgb(0 0 0 / 0.2), 0 0 0 1px rgb(255 177 66 / 0.18);
+}
+
+@supports (animation-timeline: view()) {
+  main > section > div {
+    animation: epic-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 30%;
+  }
+}
+
+html.light main {
+  background-image: linear-gradient(rgb(15 35 58 / 0.07) 1px, transparent 1px), linear-gradient(90deg, rgb(15 35 58 / 0.07) 1px, transparent 1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
 
     html.light input:focus,
     html.light textarea:focus,
