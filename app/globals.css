@@ -214,6 +214,19 @@ main {
   to { transform: translate(-50%, -50%) rotate(342deg); }
 }
 
+html.light .solar-system {
+  opacity: 0.62;
+  mix-blend-mode: multiply;
+}
+
+html.light .solar-system .solar-orbit {
+  border-color: rgba(20, 44, 72, 0.26);
+}
+
+html.light .solar-system .solar-sun {
+  box-shadow: 0 0 28px rgba(238, 113, 28, 0.5), 0 0 72px rgba(238, 113, 28, 0.22);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .solar-orbit { animation: none; }
 }
