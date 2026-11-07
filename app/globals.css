@@ -135,14 +135,88 @@
         display: block;
     }
 
-    html.light input,
-    html.light textarea,
-    html.light select {
-        border-color: rgb(34 51 73 / 0.34);
-        background-color: rgb(255 248 237 / 0.92);
-        color: rgb(16 28 46);
-        box-shadow: 0 3px 0 rgb(204 75 19 / 0.1);
-    }
+html.light input,
+html.light textarea {
+  background: #fff7e8;
+  border-color: rgb(204 75 19 / 0.55);
+}
+
+/* Cinematic motion system: scroll reveals, a living grid, and tactile hover states. */
+@keyframes epic-grid-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 72px 72px, -72px -72px; }
+}
+
+@keyframes epic-reveal {
+  from { opacity: 0; transform: translateY(32px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes epic-line-grow {
+  from { transform: scaleX(0); transform-origin: left; }
+  to { transform: scaleX(1); transform-origin: left; }
+}
+
+main {
+  background-image: linear-gradient(rgb(255 255 255 / 0.025) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  animation: epic-grid-drift 22s linear infinite;
+}
+
+main > section {
+  position: relative;
+  isolation: isolate;
+  view-timeline-name: --section-view;
+  view-timeline-axis: block;
+}
+
+main > section::after {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 5rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(255 177 66 / 0.9));
+  content: "";
+  animation: epic-line-grow linear both;
+  animation-timeline: --section-view;
+  animation-range: entry 10% cover 25%;
+}
+
+.glass-panel,
+main > section .group,
+main > section article {
+  transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 500ms ease, border-color 300ms ease;
+}
+
+.glass-panel:hover,
+main > section .group:hover,
+main > section article:hover {
+  transform: translateY(-6px) rotateX(1deg);
+  box-shadow: 0 22px 55px rgb(0 0 0 / 0.2), 0 0 0 1px rgb(255 177 66 / 0.18);
+}
+
+@supports (animation-timeline: view()) {
+  main > section > div {
+    animation: epic-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 30%;
+  }
+}
+
+html.light main {
+  background-image: linear-gradient(rgb(15 35 58 / 0.07) 1px, transparent 1px), linear-gradient(90deg, rgb(15 35 58 / 0.07) 1px, transparent 1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
 
     html.light input:focus,
     html.light textarea:focus,
