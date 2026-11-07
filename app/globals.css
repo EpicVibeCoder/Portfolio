@@ -161,7 +161,7 @@ main {
 .solar-system {
   position: absolute;
   z-index: 0;
-  top: 50%;
+  top: 42%;
   left: 50%;
   width: min(78vw, 980px);
   aspect-ratio: 1;
