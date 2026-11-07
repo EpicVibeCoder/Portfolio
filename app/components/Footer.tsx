@@ -34,7 +34,10 @@ export default function Footer() {
             <div className="mx-auto mb-16 grid max-w-6xl gap-12 md:grid-cols-2">
                 {/* Brand & Summary */}
                 <div>
-                    <h2 className="mb-6 font-display text-3xl text-gold-500">EpicVibeCoder</h2>
+                    <div className="mb-6 flex items-center gap-3">
+                        <span className="h-px w-8 bg-accent" aria-hidden="true" />
+                        <h2 className="font-display text-3xl font-bold tracking-tight text-gold-500">EpicVibeCoder</h2>
+                    </div>
                     <p className="text-cream-100 max-w-sm leading-relaxed">Building secure, scalable, and user-centric digital solutions using modern technologies.</p>
                 </div>
 
