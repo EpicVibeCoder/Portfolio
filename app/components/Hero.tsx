@@ -48,7 +48,10 @@ export default function Hero() {
             {/* Main Content */}
             <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
                 <div className="transform-none opacity-100">
-                    <p className="eyebrow mb-5">// independent engineer · available for ambitious work</p>
+                    <div className="mb-6 flex flex-col items-center gap-2">
+                        <p className="eyebrow">// independent engineer · available for ambitious work</p>
+                        <p className="font-mono text-sm font-bold uppercase tracking-[0.35em] text-accent md:text-base">EpicVibeCoder</p>
+                    </div>
                     <h1 className="mb-4 max-w-5xl font-sans text-5xl font-black uppercase leading-[0.86] tracking-[-0.08em] text-cream-50 md:mb-6 md:text-9xl">
                         Make it
                         <br />
