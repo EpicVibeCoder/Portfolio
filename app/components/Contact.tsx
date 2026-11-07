@@ -60,7 +60,7 @@ export default function Contact() {
                     className="mb-16 text-center"
                 >
                     <h2 className="mb-6 font-display text-4xl text-gold-500 md:text-5xl">Get in Touch</h2>
-                    <p className="text-cream-200/60 mx-auto max-w-2xl text-lg leading-relaxed">
+                    <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
                         Have a project in mind or want to discuss a potential collaboration? I'd love to hear from you.
                     </p>
                 </motion.div>
@@ -70,7 +70,7 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="rounded-2xl border border-white/5 bg-cocoa-800/50 p-8 backdrop-blur-sm md:p-12"
+                    className="rounded-2xl border border-cocoa-200/40 bg-cocoa-800/80 p-8 shadow-[0_24px_80px_rgb(3_8_20_/_0.18)] backdrop-blur-sm md:p-12"
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid gap-6 md:grid-cols-2">
@@ -85,7 +85,7 @@ export default function Contact() {
                                     required
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full rounded-lg border border-white/10 bg-cocoa-900/50 px-4 py-3 text-cream-50 transition-colors focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+                                    className="w-full rounded-lg border border-cocoa-200/50 bg-cocoa-950/70 px-4 py-3 text-foreground placeholder:text-muted-foreground/70 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/40"
                                     placeholder="John Doe"
                                 />
                             </div>
@@ -100,7 +100,7 @@ export default function Contact() {
                                     required
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full rounded-lg border border-white/10 bg-cocoa-900/50 px-4 py-3 text-cream-50 transition-colors focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+                                    className="w-full rounded-lg border border-cocoa-200/50 bg-cocoa-950/70 px-4 py-3 text-foreground placeholder:text-muted-foreground/70 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/40"
                                     placeholder="john@example.com"
                                 />
                             </div>
@@ -117,7 +117,7 @@ export default function Contact() {
                                 required
                                 value={formData.subject}
                                 onChange={handleChange}
-                                className="w-full rounded-lg border border-white/10 bg-cocoa-900/50 px-4 py-3 text-cream-50 transition-colors focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+                                className="w-full rounded-lg border border-cocoa-200/50 bg-cocoa-950/70 px-4 py-3 text-foreground placeholder:text-muted-foreground/70 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/40"
                                 placeholder="Project Inquiry"
                             />
                         </div>
@@ -133,7 +133,7 @@ export default function Contact() {
                                 rows={5}
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full resize-none rounded-lg border border-white/10 bg-cocoa-900/50 px-4 py-3 text-cream-50 transition-colors focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+                                className="w-full resize-none rounded-lg border border-cocoa-200/50 bg-cocoa-950/70 px-4 py-3 text-foreground placeholder:text-muted-foreground/70 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/40"
                                 placeholder="Tell me about your project..."
                             />
                         </div>
@@ -141,7 +141,7 @@ export default function Contact() {
                         <button
                             type="submit"
                             disabled={status === 'loading' || status === 'success'}
-                            className="group flex w-full items-center justify-center gap-2 rounded-lg bg-gold-500 py-4 font-bold text-cocoa-900 transition-all hover:bg-gold-600 disabled:cursor-not-allowed disabled:opacity-70"
+                            className="group flex w-full items-center justify-center gap-2 rounded-lg bg-gold-500 py-4 font-mono text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground shadow-lg shadow-gold-500/20 transition-all hover:-translate-y-0.5 hover:bg-gold-600 hover:shadow-gold-500/30 disabled:cursor-not-allowed disabled:opacity-70"
                         >
                             {status === 'loading' ? (
                                 <FaSpinner className="animate-spin text-xl" />
