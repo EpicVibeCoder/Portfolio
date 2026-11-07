@@ -81,7 +81,7 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="group flex flex-col overflow-hidden rounded-2xl border border-white/5 bg-cocoa-900/40 backdrop-blur-sm transition-colors hover:border-gold-500/30"
+                            className="group flex flex-col overflow-hidden border border-white/10 bg-cocoa-900/70 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-accent/60 hover:shadow-[8px_8px_0_rgb(190_255_63_/_0.12)]"
                         >
                             {/* Project Image Placeholder */}
                             <div className="relative h-48 w-full overflow-hidden bg-cocoa-800/50">

@@ -41,8 +41,8 @@ export default function Navbar() {
     return (
         <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className={clsx("fixed left-0 right-0 top-0 z-50 px-6 py-4 transition-all duration-300", solidBg ? "glass-panel mx-4 mt-4 py-3" : "bg-transparent")}>
             <div className="mx-auto flex max-w-7xl items-center justify-between">
-                <a href="#" className="font-display text-2xl text-gold-500 transition-colors hover:text-gold-400">
-                    EpicVibeCoder
+                <a href="#" className="font-mono text-sm font-bold uppercase tracking-[0.18em] text-cream-50 transition-colors hover:text-accent">
+                    EVC<span className="text-gold-500">/</span>26
                 </a>
 
                 {/* Desktop Nav */}

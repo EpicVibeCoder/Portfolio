@@ -48,19 +48,17 @@ export default function Hero() {
             {/* Main Content */}
             <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
                 <div className="transform-none opacity-100">
-                    <h3 className="mb-2 font-display text-xl tracking-wide text-gold-500 md:mb-4 md:text-3xl">Hello, I am</h3>
-                    <h1 className="mb-4 font-serif text-4xl font-bold leading-tight text-cream-50 md:mb-6 md:text-8xl">
-                        EpicVibe
+                    <p className="eyebrow mb-5">// independent engineer · available for ambitious work</p>
+                    <h1 className="mb-4 max-w-5xl font-sans text-5xl font-black uppercase leading-[0.86] tracking-[-0.08em] text-cream-50 md:mb-6 md:text-9xl">
+                        Make it
                         <br />
-                        <span className="text-gradient-gold">Coder</span>
+                        <span className="text-gradient-gold">legendary.</span>
                     </h1>
                     <div className="mx-auto mb-6 max-w-2xl md:mb-8">
-                        <h2 className="mb-3 font-display text-lg font-semibold leading-tight text-gold-400 md:mb-4 md:text-3xl">
-                            <span className="text-gradient-gold">Vibe coding at the speed of AI.</span>
+                        <h2 className="mb-3 font-mono text-sm font-semibold uppercase leading-tight tracking-[0.16em] text-gold-300 md:mb-4 md:text-xl">
+                            Full-stack systems with main-character energy.
                         </h2>
-                        <h3>
-                        <span className="text-2xl text-gradient-gold font-semibold leading-tight font-display">Built to scale. Secured by design.</span>
-                        </h3>
+                        <h3><span className="font-display text-2xl text-accent md:text-3xl">Fast ideas. Serious engineering.</span></h3>
                         
                         <p className="text-base leading-relaxed text-cream-100/80 md:text-xl">
                             {" "}

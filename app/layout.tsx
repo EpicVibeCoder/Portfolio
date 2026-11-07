@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         icon: "/favicon.svg",
     },
     title: {
-        default: "EpicVibeCoder | Premium Full-Stack Developer Portfolio",
+        default: "EpicVibeCoder | Make it legendary.",
         template: "%s | EpicVibeCoder",
     },
     description: "EpicVibeCoder is a Full-stack developer specializing in Next.js, React, Node.js, and Blockchain. Crafting pixel-perfect, secure, and scalable digital experiences.",
