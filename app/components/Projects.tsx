@@ -81,25 +81,25 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="group flex flex-col overflow-hidden rounded-2xl border border-white/5 bg-cocoa-900/40 backdrop-blur-sm transition-colors hover:border-gold-500/30"
+                            className="group flex flex-col overflow-hidden border border-cocoa-700/40 bg-cocoa-900/90 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-accent/60 hover:shadow-[8px_8px_0_rgb(190_255_63_/_0.12)]"
                         >
                             {/* Project Image Placeholder */}
-                            <div className="relative h-48 w-full overflow-hidden bg-cocoa-800/50">
+                            <div className="relative h-48 w-full overflow-hidden bg-[#0b1220]">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     unoptimized={project.image.startsWith("https://placehold.co")}
-                                    className="transform object-cover opacity-80 transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100"
+                                    className="transform object-cover brightness-[0.72] contrast-[1.18] saturate-[0.72] opacity-90 transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:brightness-90 group-hover:saturate-100 group-hover:opacity-100"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-cocoa-900 to-transparent opacity-60" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#080d18] via-[#0f172a]/35 to-transparent opacity-90" />
                             </div>
 
                             <div className="flex flex-grow flex-col p-6">
                                 <h3 className="mb-2 text-2xl font-bold text-cream-50 transition-colors group-hover:text-gold-400">{project.title}</h3>
                                 <p className="mb-4 font-mono text-xs uppercase tracking-wider text-gold-500/80">{project.tech}</p>
-                                <p className="text-cream-200/80 mb-6 flex-grow text-sm leading-relaxed">{project.description}</p>
+                                <p className="text-cream-100 mb-6 flex-grow text-sm leading-relaxed">{project.description}</p>
 
                                 <div className="mt-auto flex gap-4">
                                     {project.links.github !== "#" && (

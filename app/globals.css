@@ -4,58 +4,123 @@
 
 @layer base {
     :root {
-        /* Color Palette - Cocoa (RGB Channels) */
-        --cocoa-50: 251 245 242; /* #fbf5f2 */
-        --cocoa-100: 245 233 226; /* #f5e9e2 */
-        --cocoa-200: 236 211 196; /* #ecd3c4 */
-        --cocoa-300: 223 182 252; /* #dfb6fc */
-        --cocoa-400: 156 111 86; /* #9c6f56 */
-        --cocoa-500: 125 82 62; /* #7d523e */
-        --cocoa-600: 97 52 40; /* #613428 */
-        --cocoa-700: 79 39 23; /* #4f2717 */
-        --cocoa-800: 66 34 24; /* #422218 */
-        --cocoa-900: 56 30 22; /* #381e16 */
-        --cocoa-950: 42 18 8; /* #2a1208 */
+        /* Electric midnight palette */
+        --cocoa-50: 240 246 255;
+        --cocoa-100: 215 229 247;
+        --cocoa-200: 163 190 220;
+        --cocoa-300: 105 145 190;
+        --cocoa-400: 65 105 153;
+        --cocoa-500: 38 70 113;
+        --cocoa-600: 25 49 84;
+        --cocoa-700: 17 34 63;
+        --cocoa-800: 12 25 48;
+        --cocoa-900: 7 16 32;
+        --cocoa-950: 3 8 20;
 
-        /* Color Palette - Gold (RGB Channels) */
-        --gold-50: 253 249 232; /* #fdf9e8 */
-        --gold-100: 251 241 197; /* #fbf1c5 */
-        --gold-200: 246 225 142; /* #f6e18e */
-        --gold-300: 239 203 77; /* #efcb4d */
-        --gold-400: 232 178 30; /* #e8b21e */
-        --gold-500: 212 155 16; /* #d49b10 */
-        --gold-600: 178 123 11; /* #b27b0b */
-        --gold-700: 190 146 112; /* #BE9270 */
-        --gold-800: 120 80 14; /* #78500e */
-        --gold-900: 102 66 18; /* #664212 */
+        /* Signal orange and acid lime */
+        --gold-50: 255 247 232;
+        --gold-100: 255 228 185;
+        --gold-200: 255 193 115;
+        --gold-300: 255 143 58;
+        --gold-400: 255 91 31;
+        --gold-500: 255 73 24;
+        --gold-600: 224 52 15;
+        --gold-700: 185 38 13;
+        --gold-800: 117 28 14;
+        --gold-900: 74 20 14;
+        --cream-50: 245 248 242;
+        --cream-100: 215 225 218;
 
-        /* Color Palette - Cream (RGB Channels) */
-        --cream-50: 253 245 230; /* #FDF5E6 */
-        --cream-100: 248 238 217; /* #F8EED9 */
-
-        /* Semantic Tokens */
         --background: var(--cocoa-950);
         --foreground: var(--cream-50);
-
         --primary: var(--gold-500);
-        --primary-foreground: 255 255 255;
-
-        --secondary: var(--cocoa-600);
+        --primary-foreground: 3 8 20;
+        --secondary: var(--cocoa-800);
         --secondary-foreground: var(--cream-50);
-
-        --accent: var(--gold-400);
+        --accent: 190 255 63;
         --muted: var(--cocoa-900);
         --muted-foreground: var(--cocoa-200);
-
-        --border: 255 255 255; /* RGB for use with opacity */
+        --border: 255 255 255;
     }
 
     html {
         scroll-behavior: smooth;
+        color-scheme: dark;
+    }
+
+    html.light {
+        color-scheme: light;
+
+        --cocoa-50: 16 28 46;
+        --cocoa-100: 34 51 73;
+        --cocoa-200: 67 91 117;
+        --cocoa-300: 102 130 159;
+        --cocoa-400: 148 171 194;
+        --cocoa-500: 190 207 222;
+        --cocoa-600: 218 228 236;
+        --cocoa-700: 232 239 244;
+        --cocoa-800: 241 245 248;
+        --cocoa-900: 248 250 252;
+        --cocoa-950: 255 255 255;
+
+        --gold-50: 255 249 240;
+        --gold-100: 255 232 198;
+        --gold-200: 255 201 133;
+        --gold-300: 229 105 31;
+        --gold-400: 204 75 19;
+        --gold-500: 182 58 12;
+        --gold-600: 151 43 8;
+        --gold-700: 116 32 7;
+        --gold-800: 78 25 9;
+        --gold-900: 49 20 10;
+        --cream-50: 16 28 46;
+        --cream-100: 34 51 73;
+
+        --background: var(--cocoa-950);
+        --foreground: var(--cream-50);
+        --primary: var(--gold-500);
+        --primary-foreground: 255 255 255;
+        --secondary: var(--cocoa-800);
+        --secondary-foreground: var(--cream-50);
+        --accent: 71 116 0;
+        --muted: var(--cocoa-900);
+        --muted-foreground: var(--cocoa-200);
+        --border: 16 28 46;
     }
 
     body {
         @apply bg-background font-sans text-foreground;
+        background-image: linear-gradient(rgb(255 255 255 / 0.025) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 0.025) 1px, transparent 1px);
+        background-size: 48px 48px;
+    }
+
+    html.light body {
+        background-image: linear-gradient(rgb(16 28 46 / 0.07) 1px, transparent 1px), linear-gradient(90deg, rgb(16 28 46 / 0.07) 1px, transparent 1px);
+    }
+
+    html.light .glass-panel {
+        border: 1px solid rgb(76 104 130 / 0.72);
+        background-color: rgb(220 232 241 / 0.98);
+        box-shadow: 0 18px 42px rgb(16 28 46 / 0.16), 0 2px 0 rgb(255 255 255 / 0.7) inset;
+    }
+
+    html.light .btn-outline {
+        border-color: rgb(34 51 73 / 0.55);
+        color: rgb(16 28 46);
+    }
+
+    html.light main > section {
+        border-top: 1px solid rgb(76 104 130 / 0.2);
+        background-color: rgb(248 250 252 / 0.82);
+    }
+
+    html.light main > section:nth-of-type(even) {
+        background-color: rgb(232 239 244 / 0.72);
+    }
+
+    html.light .glass-panel,
+    html.light .glass-panel:hover {
+        border-color: rgb(76 104 130 / 0.72);
     }
 
     h1,
@@ -64,39 +129,25 @@
     h4,
     h5,
     h6 {
-        @apply font-serif font-bold text-foreground;
+        @apply font-sans font-bold text-foreground;
+        letter-spacing: -0.055em;
     }
 }
 
 @layer components {
     /* Reusable Component Classes */
     .btn {
-        @apply relative inline-flex transform items-center justify-center overflow-hidden rounded-full px-8 py-3 font-serif font-bold transition-all duration-300;
+        @apply relative inline-flex transform items-center justify-center overflow-hidden rounded-none border border-gold-500 bg-gold-500 px-8 py-3 font-mono text-xs font-bold uppercase tracking-[0.18em] text-cocoa-950 transition-all duration-300;
     }
 
-    .btn-primary {
-        @apply bg-gradient-to-r from-gold-600 to-gold-700 text-white shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-gold-500 hover:to-gold-600 hover:shadow-gold-500/30;
-    }
+    .btn-primary { @apply hover:-translate-y-1 hover:bg-accent hover:shadow-[6px_6px_0_rgb(255_255_255_/_0.18)]; }
+    .btn-outline { @apply border border-white/30 bg-transparent text-cream-50 hover:border-accent hover:text-accent; }
+    .glass-panel { @apply rounded-none border border-white/15 bg-cocoa-900/70 shadow-2xl backdrop-blur-xl; }
+    .section-title { @apply mb-8 inline-block border-b-2 border-gold-500 pb-4 font-sans text-4xl uppercase tracking-[-0.06em] text-cream-50 md:text-6xl; }
+    .section-title-center { @apply mb-16 text-center font-sans text-4xl uppercase tracking-[-0.06em] text-cream-50 md:text-6xl; }
+    .text-gradient-gold { @apply animate-shine bg-gradient-to-r from-gold-300 via-gold-500 to-accent bg-[length:200%_auto] bg-clip-text text-transparent; }
 
-    .btn-outline {
-        @apply border-2 border-gold-500 text-gold-500 hover:bg-gold-500/10 hover:shadow-lg hover:shadow-gold-500/20;
-    }
-
-    .glass-panel {
-        @apply rounded-2xl border border-white/10 bg-cocoa-900/40 shadow-xl backdrop-blur-md;
-    }
-
-    .section-title {
-        @apply mb-8 inline-block border-b border-gold-500/20 pb-4 font-serif text-4xl text-gold-500 md:text-5xl;
-    }
-
-    .section-title-center {
-        @apply mb-16 text-center font-serif text-4xl text-gold-500 md:text-5xl;
-    }
-
-    .text-gradient-gold {
-        @apply animate-shine bg-gradient-to-r from-gold-300 via-gold-100 to-gold-300 bg-[length:200%_auto] bg-clip-text text-transparent;
-    }
+    .eyebrow { @apply font-mono text-[10px] uppercase tracking-[0.28em] text-accent; }
 }
 
 @keyframes shine {

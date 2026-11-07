@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 import Button from "./ui/Button";
 
 const navItems = [
@@ -18,7 +18,23 @@ const navItems = [
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isLight, setIsLight] = useState(false);
     const solidBg = mobileMenuOpen || isScrolled;
+
+    useEffect(() => {
+        const savedTheme = window.localStorage.getItem("portfolio-theme");
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        const light = savedTheme ? savedTheme === "light" : prefersLight;
+        setIsLight(light);
+        document.documentElement.classList.toggle("light", light);
+    }, []);
+
+    const toggleTheme = () => {
+        const nextIsLight = !isLight;
+        setIsLight(nextIsLight);
+        document.documentElement.classList.toggle("light", nextIsLight);
+        window.localStorage.setItem("portfolio-theme", nextIsLight ? "light" : "dark");
+    };
 
     useEffect(() => {
         let raf = 0;
@@ -41,8 +57,8 @@ export default function Navbar() {
     return (
         <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className={clsx("fixed left-0 right-0 top-0 z-50 px-6 py-4 transition-all duration-300", solidBg ? "glass-panel mx-4 mt-4 py-3" : "bg-transparent")}>
             <div className="mx-auto flex max-w-7xl items-center justify-between">
-                <a href="#" className="font-display text-2xl text-gold-500 transition-colors hover:text-gold-400">
-                    EpicVibeCoder
+                <a href="#" className="font-mono text-sm font-bold uppercase tracking-[0.18em] text-cream-50 transition-colors hover:text-accent">
+                    EVC<span className="text-gold-500">/</span>26
                 </a>
 
                 {/* Desktop Nav */}
@@ -52,6 +68,14 @@ export default function Navbar() {
                             {link.name}
                         </a>
                     ))}
+                    <button
+                        type="button"
+                        onClick={toggleTheme}
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-cocoa-700/50 text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-400"
+                        aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+                    >
+                        {isLight ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
+                    </button>
                     <a href="/EpicVibeCoder_CV.pdf" download="EpicVibeCoder_CV.pdf">
                         <Button variant="primary" className="px-6 py-2 text-sm">
                             Download CV
@@ -60,14 +84,24 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Toggle */}
-                <button className="text-2xl text-cream-100 min-[992px]:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu">
+                <div className="flex items-center gap-4 min-[992px]:hidden">
+                    <button
+                        type="button"
+                        onClick={toggleTheme}
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-cocoa-700/50 text-cream-100 transition-colors hover:border-gold-500 hover:text-gold-400"
+                        aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+                    >
+                        {isLight ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
+                    </button>
+                    <button className="text-2xl text-cream-100" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu">
                     {mobileMenuOpen ? <FaTimes /> : <FaBars />}
-                </button>
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-cocoa-900/95 py-4 backdrop-blur-xl min-[992px]:hidden">
+                <div className="mt-4 overflow-hidden rounded-xl border border-cocoa-700/50 bg-cocoa-900/95 py-4 backdrop-blur-xl min-[992px]:hidden">
                     <ul className="space-y-4 px-4">
                         {navItems.map((link) => (
                             <li key={link.name}>
